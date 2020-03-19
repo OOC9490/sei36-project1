@@ -1,0 +1,31 @@
+<h1>Sign up for a Smash wiki account!</h1>
+
+<p>This will grant you the ability to contribute to the website by adding or editing fighters and special moves!</p>
+
+<%= form_for @user do |f| %>
+
+<% if @user.errors.any? %>
+    <ol>
+        <% @user.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+        <% end %>
+    </ol>
+<% end %>
+
+    <fieldset>
+        <%= f.label :email %>
+        <%= f.email_field :email, :required => true, :autofocus => true %>
+    </fieldset>
+
+    <fieldset>
+        <%= f.label :password %>
+        <%= f.password_field :password, :required => true %>
+    </fieldset>
+
+    <fieldset>
+        <%= f.label :password_confirmation %>
+        <%= f.password_field :password_confirmation, :required => true %>
+    </fieldset>
+
+    <%= f.submit "Sign up!" %>
+<% end %> 

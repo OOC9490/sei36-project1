@@ -4,4 +4,11 @@ Rails.application.routes.draw do
   resources :fighters
   resources :specials
   resources :games
+  resources :users
+
+  get 'session/new'
+
+  get "/login" => "session#new"
+  post "/login" => "session#create"
+  delete "/login" => "session#destroy"
 end

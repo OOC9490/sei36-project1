@@ -13,6 +13,14 @@
   <body>
     <div class="site_wrapper">
       <header>
+        <nav class="user_verification">
+          <% if @current_user.present? %>
+            <%= link_to "Sign out #{@current_user.email}", login_path, :method => "delete"%>
+          <% else %>
+            <%= link_to "Sign up", new_user_path %>
+            <%= link_to "Sign in", login_path %>
+          <% end %>
+        </nav>
         <div class="div_break"></div>
       </header>
       <div class="container">
@@ -20,9 +28,12 @@
           <ul>
             <li><%= link_to "Home", root_path, :class => "btn_hover" %></li>
             <li><%= link_to "Fighters", fighters_path, :class => "btn_hover" %></li>
-            <li><%= link_to "Add a Fighter", new_fighter_path, :class => "btn_hover" %></li>
-            <li><%= link_to "Add a Special Move", new_special_path, :class => "btn_hover" %></li>
-            <li><%= link_to "View the Games", games_path, :class => "btn_hover" %></li>
+            <li><%= link_to "Special Moves", specials_path, :class => "btn_hover" %></li>
+            <li><%= link_to "Smash Games", games_path, :class => "btn_hover" %></li>
+            <% if @current_user.present? %>
+              <li><%= link_to "Add a Fighter", new_fighter_path, :class => "btn_hover" %></li>
+              <li><%= link_to "Add a Special Move", new_special_path, :class => "btn_hover" %></li>
+            <% end %>
           </ul>
         </nav>
         <main>

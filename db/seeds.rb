@@ -1,3 +1,12 @@
+User.destroy_all
+
+u1 = User.create(:email => "lcarreon@ga.co", password: "chicken", administrator: 1)
+u2 = User.create(:email => "jturnbull@ga.co", password: "chicken", administrator: 1)
+u3 = User.create(:email => "abrymora@ga.co", password: "chicken", administrator: 1)
+u4 = User.create(:email => "test_user@ga.co", password: "chicken", administrator: 0)
+
+puts "#{User.count} users created"
+
 Fighter.destroy_all
 
 c1 = Fighter.create(

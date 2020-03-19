@@ -1,4 +1,5 @@
 class SpecialsController < ApplicationController
+  before_action :check_for_login, :only => [:new, :edit, :update]
   def index
     @fighters = Fighter.all
     @specials = Special.all

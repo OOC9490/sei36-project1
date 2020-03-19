@@ -4,7 +4,7 @@ body{
     margin:0;
     font-family: 'Ubuntu', sans-serif;
     box-sizing: border-box;
-    background: linear-gradient(to bottom right, #870000, #190A05) ;
+    background: linear-gradient(to bottom right, #870000, #160b0b , #190A05) ;
     height:200vh;
 }
 
@@ -17,7 +17,6 @@ body{
 header{
     color:#fff;
     background-color: #000;
-    padding-top: 2em;
     display: flex;
     flex-direction: column;
 }
@@ -45,12 +44,12 @@ input[type=submit]:hover{
     text-shadow: -2px 2px 0 #000;
 }
 
-input[type=text], input[type=url], select{
+input[type=text], input[type=url], input[type=email], input[type=password], select{
     display: block;
     font-size: 1em;
 }
 
-input[type=text], input[type=url]{
+input[type=text], input[type=url], input[type=email], input[type=password]{
     width: 50%;
     border-radius: 0.5em;
     margin: 0.5em 0;
@@ -69,6 +68,25 @@ a{
 
 a:hover{
     text-decoration: underline;
+}
+
+.user_verification{
+    margin: 1em 0 2em 0;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.user_verification a{
+    margin: 0 1em;
+    padding: 0.25em 1em;
+    border-radius: 2em;
+    background: linear-gradient( rgb(116, 116, 116), #fff,rgb(116, 116, 116));
+    color: #000;
+}
+
+.user_verification a:hover{
+    text-decoration: none;
+    background: linear-gradient( #fff, rgb(116, 116, 116), #fff);
 }
 
 .container{
@@ -150,7 +168,7 @@ svg{
 
 .footer_content svg:hover{
     transform: scale(1.5);
-    transition: transform 0.5s ease-in;
+    transition: transform 0.25s ease-in;
 }
 
 .footer_text{

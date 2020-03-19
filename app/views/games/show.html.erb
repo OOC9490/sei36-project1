@@ -5,8 +5,8 @@
         <li><strong>Patch Version:</strong> <%= @game.patch_version %></li>
         <li>
             <strong>Fighters:</strong><br>
-            <% @game.characters.each do |character| %>
-                <%= link_to image_tag(character.stock_symbol, :class => "profile_thumb", :title => character.name), character %>
+            <% @game.fighters.each do |fighter| %>
+                <%= link_to image_tag(fighter.stock_symbol, :class => "profile_thumb", :title => fighter.name), fighter %>
             <% end %>
         </li>
     </ul>
