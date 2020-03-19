@@ -37,18 +37,37 @@ input[type=submit]{
     transition: all 0.25s ease-in-out;
 }
 
+input[type=submit]:hover{
+    transform: translate(0, -1em);
+    padding: 1em;
+    border-radius: 3em;
+    border: 5px solid rgb(255, 230, 0);
+    text-shadow: -2px 2px 0 #000;
+}
+
+input[type=text], input[type=url], select{
+    display: block;
+    font-size: 1em;
+}
+
+input[type=text], input[type=url]{
+    width: 50%;
+    border-radius: 0.5em;
+    margin: 0.5em 0;
+}
+
 #search{
     border-radius: 0.5em;
     width: 100%;
     font-size: 1.25em;
 }
 
-.user_link{
+a{
     color: #fff;
     text-decoration: none;
 }
 
-.user_link:hover{
+a:hover{
     text-decoration: underline;
 }
 

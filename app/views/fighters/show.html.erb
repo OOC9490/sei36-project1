@@ -17,7 +17,7 @@
                 <ul>
                 <% @fighter.specials.each do |special| %>
                     <li>
-                        <%= link_to special.name, (special if special.preview.present?) , :class => "user_link" %>
+                        <%= link_to special.name, special if special.name.present? %>
                     </li>
                 <% end %>
                 </ul>

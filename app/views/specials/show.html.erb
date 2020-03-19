@@ -1,5 +1,5 @@
 <div class="profile">
-    <h2><%= link_to @special.fighter.name, @special.fighter, :class => "user_link" %> - <%= @special.name %></h2>
+    <h2><%= link_to @special.fighter.name, @special.fighter %> - <%= @special.name %></h2>
     <hr>
     <div class="inner_profile special_moves">
         <ul>
@@ -13,6 +13,6 @@
 </div>
 
 <div class="controls">
-    <%= button_to "Edit Move", edit_special_path(@special), :method => "get" %>
-    <%= button_to "Delete #{@special.name}", @special , :method => "delete", :data => { :confirm => "Are you sure?"} %>
+    <%= button_to "Edit Move", edit_special_path(@special), :method => "get", :class => "btn_hover" %>
+    <%= button_to "Delete #{@special.name}", @special , :method => "delete", :data => { :confirm => "Are you sure?"} , :class => "btn_hover"%>
 </div>

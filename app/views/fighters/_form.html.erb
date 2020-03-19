@@ -4,11 +4,11 @@
     <%= f.label :franchise %>
     <%= f.text_field :franchise %>
     <%= f.label :stock_symbol %>
-    <%= f.text_field :stock_symbol, :placeholder => "A link to an image..." %>
+    <%= f.text_field :stock_symbol, :placeholder => "Upload an image..." %>
     <%= f.label :availability %>
     <%= f.text_field :availability %>
     <%= f.label :image %>
-    <%= f.url_field :image, :placeholder => "A link to an image..."  %>
+    <%= f.url_field :image, :placeholder => "Upload an image..."  %>
     <%= f.label :game_id %>
     <%= f.select :game_ids, Game.pluck(:name, :id), :include_blank => true %>
 
