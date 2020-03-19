@@ -8,7 +8,7 @@
     <%= f.label :damage_dealt %>
     <%= f.text_field :damage_dealt %>
     <%= f.label :preview %>
-    <%= f.url_field :preview, :placeholder => "Upload a file..."  %>
+    <%= f.url_field :preview, :placeholder => "Provide a link to your image..."  %>
     <%= f.label :fighter_id %>
     <%= f.select :fighter_id, Fighter.pluck(:name, :id), :include_blank => true %>
 

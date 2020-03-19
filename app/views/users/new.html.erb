@@ -4,14 +4,6 @@
 
 <%= form_for @user do |f| %>
 
-<% if @user.errors.any? %>
-    <ol>
-        <% @user.errors.full_messages.each do |msg| %>
-            <li><%= msg %></li>
-        <% end %>
-    </ol>
-<% end %>
-
     <fieldset>
         <%= f.label :email %>
         <%= f.email_field :email, :required => true, :autofocus => true %>
@@ -28,4 +20,13 @@
     </fieldset>
 
     <%= f.submit "Sign up!" %>
+
+    <% if @user.errors.any? %>
+    <p>The following error(s) are stopping you from signing up:</p>
+    <ol>
+        <% @user.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+        <% end %>
+    </ol>
+    <% end %>
 <% end %> 

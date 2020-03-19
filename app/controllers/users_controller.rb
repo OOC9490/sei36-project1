@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   before_action :check_for_login, :only => [:edit, :update]
-  before_action :check_for_admin, :only => [:index]
+  before_action :check_for_admin, :only => [:index, :destroy, :reset_password]
 
   def index
     @users = User.all
@@ -18,6 +18,20 @@ class UsersController < ApplicationController
     else
       render :new
     end
+  end
+
+  def edit
+    @user = User.find params[:id]
+  end
+
+  def update
+    
+  end
+
+  def destroy
+    user = User.find params[:id]
+    user.destroy
+    redirect_to users_path
   end
 
   private

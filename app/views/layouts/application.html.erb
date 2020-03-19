@@ -33,6 +33,10 @@
             <% if @current_user.present? %>
               <li><%= link_to "Add a Fighter", new_fighter_path, :class => "btn_hover" %></li>
               <li><%= link_to "Add a Special Move", new_special_path, :class => "btn_hover" %></li>
+              <li><%= link_to "View your Profile", edit_user_path(@current_user), :class => "btn_hover" %></li>
+            <% end %>
+            <% if @current_user.administrator %>
+              <li><%= link_to "Manage users", users_path, :class => "btn_hover" %></li>
             <% end %>
           </ul>
         </nav>

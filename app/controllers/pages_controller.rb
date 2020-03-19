@@ -21,7 +21,10 @@ class PagesController < ApplicationController
     when "games"
       Game.all
     end
-    redirect_to root_path if @search_ids.size == 0
+    if @search_ids.size == 0
+      flash[:error] = "No results were found for your search!"
+      redirect_to root_path
+    end
   end
 
   private

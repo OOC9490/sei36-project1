@@ -13,10 +13,10 @@ class ApplicationController < ActionController::Base
     end
   
     def check_for_login
-      redirect_to root_path unless @current_user.present?
+        redirect_to login_path unless @current_user.present?
     end
     
     def check_for_admin
-      redirect_to root_path unless @current_user.present? && @current_user.admin
+      redirect_to root_path unless @current_user.present? && @current_user.administrator
     end
 end
