@@ -11122,3 +11122,117 @@ Processing by UsersController#index as HTML
 Completed 200 OK in 48ms (Views: 42.3ms | ActiveRecord: 1.3ms)
 
 
+Started DELETE "/login" for ::1 at 2020-03-20 08:28:39 +1100
+Processing by SessionController#destroy as HTML
+  Parameters: {"authenticity_token"=>"J7rHuKirBBd66ETPoZu11aE1Nm0TH17ByNT+tTjwK6My37R8JdoVLEavM5IfSma9XNJ/G9XiIZbtSkeUQeQTFg=="}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+Redirected to http://localhost:3000/login
+Completed 302 Found in 6ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/login" for ::1 at 2020-03-20 08:28:39 +1100
+Processing by SessionController#new as HTML
+  Rendering session/new.html.erb within layouts/application
+  Rendered session/new.html.erb within layouts/application (1.8ms)
+Completed 500 Internal Server Error in 34ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `administrator' for nil:NilClass):
+    35:               <li><%= link_to "Add a Special Move", new_special_path, :class => "btn_hover" %></li>
+    36:               <li><%= link_to "View your Profile", edit_user_path(@current_user), :class => "btn_hover" %></li>
+    37:             <% end %>
+    38:             <% if @current_user.administrator %>
+    39:               <li><%= link_to "Manage users", users_path, :class => "btn_hover" %></li>
+    40:             <% end %>
+    41:           </ul>
+  
+app/views/layouts/application.html.erb:38:in `_app_views_layouts_application_html_erb___1002159661637545418_153480'
+Started GET "/login" for ::1 at 2020-03-20 08:29:40 +1100
+Processing by SessionController#new as HTML
+  Rendering session/new.html.erb within layouts/application
+  Rendered session/new.html.erb within layouts/application (13.9ms)
+Completed 200 OK in 47ms (Views: 44.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for ::1 at 2020-03-20 08:30:04 +1100
+Processing by SessionController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wooUOCKIV2AjMIWOhLfOQqTzL65MeqxJv9nUBbsQBs/X72f8r/lGWx938tM6Zh0qWRRm2IqH0x6aR20kwgQ+eg==", "email"=>"weow@ga.co", "password"=>"[FILTERED]", "commit"=>"Log in"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "weow@ga.co"], ["LIMIT", 1]]
+  ↳ app/controllers/session_controller.rb:6
+Redirected to http://localhost:3000/
+Completed 302 Found in 245ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2020-03-20 08:30:04 +1100
+Processing by PagesController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 21ms (Views: 18.3ms | ActiveRecord: 0.5ms)
+
+
+Started DELETE "/login" for ::1 at 2020-03-20 08:30:27 +1100
+Processing by SessionController#destroy as HTML
+  Parameters: {"authenticity_token"=>"h8dbpaKsjQ6KMyZhfO7djtrrFWfSQ0l2AAdLPf9nhKOSoihhL92cNbZ0UTzCPw7mJwxcERS+NiElmfIchnO8Fg=="}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+Redirected to http://localhost:3000/login
+Completed 302 Found in 7ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/login" for ::1 at 2020-03-20 08:30:27 +1100
+Processing by SessionController#new as HTML
+  Rendering session/new.html.erb within layouts/application
+  Rendered session/new.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 18ms (Views: 16.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for ::1 at 2020-03-20 08:30:33 +1100
+Processing by SessionController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kqoSdpd3ueQTajM31tgjNSyfzEalz5Os1QO/ntYDzNSHz2GyGgao3y8tRGpoCfBd0XiFMGMy7PvwnQa/rxf0YQ==", "email"=>"lcarreon@ga.co", "password"=>"[FILTERED]", "commit"=>"Log in"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "lcarreon@ga.co"], ["LIMIT", 1]]
+  ↳ app/controllers/session_controller.rb:6
+Redirected to http://localhost:3000/
+Completed 302 Found in 258ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2020-03-20 08:30:33 +1100
+Processing by PagesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 25ms (Views: 22.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/pages/search?utf8=%E2%9C%93&search=wolf&searches%5Bcategory%5D=fighters&commit=Search" for ::1 at 2020-03-20 08:30:55 +1100
+Processing by PagesController#search as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"wolf", "searches"=>{"category"=>"fighters"}, "commit"=>"Search"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "fighters"."id" FROM "fighters" WHERE (name LIKE '%Wolf%')[0m
+  ↳ app/controllers/pages_controller.rb:10
+  Rendering pages/search.html.erb within layouts/application
+  [1m[36mFighter Load (0.7ms)[0m  [1m[34mSELECT "fighters".* FROM "fighters"[0m
+  ↳ app/views/pages/search.html.erb:5
+  Rendered pages/search.html.erb within layouts/application (16.9ms)
+Completed 200 OK in 50ms (Views: 33.9ms | ActiveRecord: 6.7ms)
+
+
+Started GET "/pages/search?utf8=%E2%9C%93&search=wolf&searches%5Bcategory%5D=fighters&commit=Search" for ::1 at 2020-03-20 08:31:24 +1100
+Processing by PagesController#search as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"wolf", "searches"=>{"category"=>"fighters"}, "commit"=>"Search"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "fighters"."id" FROM "fighters" WHERE (name LIKE '%Wolf%')[0m
+  ↳ app/controllers/pages_controller.rb:10
+  Rendering pages/search.html.erb within layouts/application
+  [1m[36mFighter Load (0.5ms)[0m  [1m[34mSELECT "fighters".* FROM "fighters"[0m
+  ↳ app/views/pages/search.html.erb:5
+  Rendered pages/search.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 42ms (Views: 30.5ms | ActiveRecord: 2.1ms)
+
+
