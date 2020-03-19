@@ -5,14 +5,14 @@
         <div class="inner_container">
         <h3><%= fighter.name %>:</h3>
         <% @specials.each do |special| %>
-            <%= link_to image_tag(special.preview, :class => "special_select"), special if special.preview.present? && special.character.id == fighter.id %>  
+            <%= link_to image_tag(special.preview, :class => "special_select"), special if special.preview.present? && special.fighter.id == fighter.id %>  
         <% end %>
         </div>
     <% end %>
     <div class="inner_container">
-        <h3>No character:</h3>
+        <h3>No fighter:</h3>
         <% @specials.each do |special| %>
-            <%= link_to image_tag(special.preview, :class => "special_select"), special if special.preview.present? && special.character.present? == false %>  
+            <%= link_to image_tag(special.preview, :class => "special_select"), special if special.preview.present? && special.fighter.present? == false %>  
         <% end %>
     </div>
 </div>

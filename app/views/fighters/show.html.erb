@@ -20,6 +20,9 @@
                     <%= link_to image_tag(special.preview, :class => "profile_preview preview"), special if special.preview.present? %>
                 <% end %>
             </li>
+            <li><strong>Final Smash:</strong><br>
+                <%= image_tag @fighter.final_smash, :class => "profile_smash preview" if @fighter.final_smash.present? %>
+            </li>
         </ul>
     </div>
 </div>
