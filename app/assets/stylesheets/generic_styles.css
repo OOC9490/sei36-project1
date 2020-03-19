@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css?family=Bangers|Ubuntu&display=swap');
+
+body{
+    margin:0;
+    font-family: 'Ubuntu', sans-serif;
+    box-sizing: border-box;
+    background: linear-gradient(to bottom right, #870000, #190A05) ;
+    height:200vh;
+}
+
+.site_wrapper{
+    display: grid;
+    grid-template-rows: auto;
+    align-content: stretch;
+}
+
+header{
+    color:#fff;
+    background-color: #000;
+    padding-top: 2em;
+    display: flex;
+    flex-direction: column;
+}
+
+ul{
+    list-style-type: none;
+}
+
+input[type=submit]{
+    margin: 1em 0;
+    border-radius: 1em;
+    padding: 0.5em 1em;
+    font-size: 1em;
+    color: white;
+    border: 1px solid #000;
+    background-color: #f30f01;
+    transition: all 0.25s ease-in-out;
+}
+
+#search{
+    border-radius: 0.5em;
+    width: 100%;
+    font-size: 1.25em;
+}
+
+.user_link{
+    color: #fff;
+    text-decoration: none;
+}
+
+.user_link:hover{
+    text-decoration: underline;
+}
+
+.container{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-column-gap: 1em;
+    padding: 1em;
+    box-sizing: border-box;
+    overflow: hidden;
+    color: #fff
+}
+
+.div_break{
+    border-top: 2px solid #fff;
+    width: 100%;
+    margin: 1em 0;
+    background-color: #fff;
+}
+
+.black{
+    border: 1px solid #000;
+    background-color: #000;
+}
+
+.main_nav{
+    width: 100%;
+}
+
+.main_nav ul{
+    padding: 0;
+    text-align: left;
+}
+
+.main_nav ul li{
+    margin: 1em 0;
+    transition: all 0.25s ease-in-out;
+}
+
+.main_nav ul li a{
+    text-decoration: none;
+    display: block;
+    width: 80%;
+    padding: 0.5em;
+    border: 1px solid #000;
+    transition: all 0.25s ease-in-out;
+    border-radius: 1em;
+    color: #fff;
+    background-color:#f30f01;
+}
+
+.btn_hover:hover{
+    transform: translate(0, -1em);
+    padding: 1em;
+    border-radius: 3em;
+    border: 5px solid rgb(255, 230, 0);
+    text-shadow: -2px 2px 0 #000;
+}
+
+footer{
+    position: fixed;
+    bottom: 0;
+    width: 100vw;
+    padding-bottom: 1em;
+    color: #ffffff;
+    background-color: #000;
+}
+
+.footer_content{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+svg{
+    margin: 0 0.25em;
+}
+
+.footer_content svg:hover{
+    transform: scale(1.5);
+    transition: transform 0.5s ease-in;
+}
+
+.footer_text{
+    margin-left: 1em;
+}
+
+.social_media{
+    margin-right: 1em;
+}
+
+.twitter{
+    fill: #1da1f2;
+}
+
+.gitHub{
+    fill: #ffffff;
+}
+
+
+.linkedIn{
+    fill: #0077b5;
+}

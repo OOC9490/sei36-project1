@@ -29,8 +29,8 @@
 .char_index:hover .char_hover {
     display:block;
     position: absolute;
-    top: -100%;
-    right: -150%;
+    top: -60%;
+    right: 0;
     z-index: 10;
     padding: 0.25em;
     background-color: slategrey;
@@ -51,13 +51,13 @@
 }
 
 .index_preview{
-    max-width: 16em;
+    max-width: 12em;
     border-radius: 1em;
 }
 
 .profile {
-    width: 100%;
-    border: 2px solid slategrey;
+    min-width: 75%;
+    border: 2px solid #410707;
     padding: 0 1em;
     border-radius: 1em;
     margin-bottom: 1em;
@@ -67,10 +67,11 @@
     display:grid;
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
+    justify-items: center;
 }
 
-ul{
-    list-style-type: none;
+.feature {
+    max-width: 24em;
 }
 
 .profile_thumb, .profile_preview {
