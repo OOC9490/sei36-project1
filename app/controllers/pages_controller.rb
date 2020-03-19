@@ -1,5 +1,7 @@
 class PagesController < ApplicationController
   def index
+    @latest_fighter = Fighter.order("entry_created").last
+    @latest_special = Special.order("entry_created").last
   end
 
   def search

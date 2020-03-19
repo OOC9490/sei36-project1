@@ -175,6 +175,43 @@ a:hover{
     background: linear-gradient( #fff, rgb(116, 116, 116), #fff);
 }
 
+.latest_additions{
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-gap: 1em;
+}
+
+.latest_container{
+    border: 2px solid #fff;
+    border-radius: 1em;
+    text-align: center;
+}
+
+.latest_container img{
+    max-height: 12em;
+    border-radius: 1em;
+}
+
+.latest_container p{
+    width: 90%;
+    margin: 1em auto;
+}
+
+.latest_title{
+    background-color: #333;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    font-size: 1.5em;
+    font-weight: 900;
+}
+
+.latest_label{
+    font-size: 1.5em;
+    font-style: italic;
+    letter-spacing: 2px;
+    display: block;
+}
+
 footer{
     position: fixed;
     bottom: 0;

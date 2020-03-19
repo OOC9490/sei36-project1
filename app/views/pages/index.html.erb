@@ -8,6 +8,26 @@
     <%= submit_tag "Search" %>
 <% end %>
 
+<h3>Check out the latest entries to the site:</h3>
+<div class="latest_additions">
+    <div class="latest_container">
+        <div class="latest_title">Fighter's news:
+            <div class="div_break"></div>
+        </div>
+        <%= link_to image_tag(@latest_fighter.stock_symbol, :alt => @latest_fighter.name, :class => "homepage_preview"), @latest_fighter %>
+        <div class="div_break"></div>
+        <p><span class="latest_label"><%= @latest_fighter.name %></span> joins the fray! (click their icon/link above to view his profile)</p>
+    </div>
+    <div class="latest_container">
+        <div class="latest_title">Skill acquired!
+        <div class="div_break"></div>
+        </div>
+        <%= link_to image_tag(@latest_special.preview, :alt => @latest_special.name, :class => "homepage_preview"), @latest_special %>
+        <div class="div_break"></div>
+        <p><span class="latest_label"><%= @latest_special.name %></span> is ready to rock and roll! (click the preview/link above to view the exciting details!)</p>
+    </div>
+</div>
+
 <% if flash[:error].present? %>
     <h2><%= flash[:error] %></h2>
 <% end %>
