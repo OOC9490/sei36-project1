@@ -34,7 +34,7 @@ class FightersController < ApplicationController
     redirect_to fighters_path
   end
 
-  private #not accessible outside of this class
+  private
   def fighter_params
     params.require(:fighter).permit :name, :stock_symbol, :availability, :image
   end

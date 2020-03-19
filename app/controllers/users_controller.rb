@@ -30,6 +30,7 @@ class UsersController < ApplicationController
 
   def destroy
     user = User.find params[:id]
+    flash[:update] = "#{user.email}'s Smash wiki membership has been revoked!"
     user.destroy
     redirect_to users_path
   end

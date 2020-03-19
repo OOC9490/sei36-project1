@@ -146,6 +146,35 @@ a:hover{
     text-shadow: -2px 2px 0 #000;
 }
 
+.user_table{
+    width: 100%;
+}
+
+.user_table, .user_table td, .user_table th{
+    border: 1px solid #333;
+}
+
+.user_table td{
+    padding: 1em;
+}
+
+.user_table th{
+    background-color: #333;
+    color: #fff;
+}
+
+.user_table td a{
+    padding: 0.25em 1em;
+    border-radius: 2em;
+    background: linear-gradient( rgb(116, 116, 116), #fff,rgb(116, 116, 116));
+    color: #000;
+}
+
+.user_table td a:hover{
+    text-decoration: none;
+    background: linear-gradient( #fff, rgb(116, 116, 116), #fff);
+}
+
 footer{
     position: fixed;
     bottom: 0;
