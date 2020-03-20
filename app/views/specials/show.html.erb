@@ -1,5 +1,9 @@
 <div class="profile">
-    <h2><%= link_to @special.fighter.name, @special.fighter %> - <%= @special.name %></h2>
+    <h2><% if @special.fighter.present? %>
+            <%= link_to @special.fighter.name, @special.fighter %> - 
+        <% end %>
+        <%= @special.name %>
+    </h2>
     <hr>
     <div class="inner_profile special_moves">
         <ul>
@@ -8,7 +12,7 @@
             <li><strong>Damage:</strong> <%= @special.damage_dealt %></li>
         </ul>
 
-        <%= image_tag @special.preview, :class => "feature", :alt => @special.name %>
+        <%= image_tag @special.preview, :class => "feature", :alt => @special.name if @special.preview.present? %>
     </div>
 </div>
 

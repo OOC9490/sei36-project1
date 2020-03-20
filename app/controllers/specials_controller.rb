@@ -38,6 +38,6 @@ class SpecialsController < ApplicationController
 
   private
   def special_params
-    params.require(:special).permit :name, :franchise, :stock_symbol, :availability, :image
+    params.require(:special).permit :name, :input_direction, :attack_type, :damage_dealt, :preview, :fighter_id
   end
 end

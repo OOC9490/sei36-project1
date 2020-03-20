@@ -1,6 +1,6 @@
 User.destroy_all
 
-u1 = User.create(:email => "lcarreon@ga.co", password: "chicken", administrator: 1)
+u1 = User.create(:email => "lcarreon@ga.co", password: "chicken", administrator: 1, nickname: "OOC", profile_image: "https://i.kym-cdn.com/entries/icons/facebook/000/021/572/maxresdefault.jpg")
 u2 = User.create(:email => "jturnbull@ga.co", password: "chicken", administrator: 1)
 u3 = User.create(:email => "abrymora@ga.co", password: "chicken", administrator: 1)
 u4 = User.create(:email => "test_user@ga.co", password: "chicken", administrator: 0)

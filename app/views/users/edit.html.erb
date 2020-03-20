@@ -1,3 +1,28 @@
-<h2>Your profile</h2>
+<% if @user.nickname.present? %>
+    <h2><%= @user.nickname %>'s profile </h2>
+<% else %>
+    <h2>Your profile</h2>
+<% end %>
 
-<h1><%= @current_user.email %></h1>
+
+<h3>Your Current avatar:</h3>
+<% if @user.profile_image.present? %>
+    <%= image_tag @user.profile_image, :alt => "#{@user.nickname}'s profile image", :class => "profile_image" %>
+<% else %>
+    <%= image_tag "/assets/no_profile_image", :alt => "no profile image provided", :class => "profile_image" %>
+<% end %>
+
+<%= form_for @user do |f| %>
+    <%= f.label :profile_image %>
+    <%= f.text_field :profile_image, :placeholder => "please provide a link to an image..." %>
+    <%= f.label :nickname %>
+    <%= f.text_field :nickname, :autofocus => true  %>
+    <%= f.label :email %>
+    <%= f.email_field :email %>
+  
+    <%= f.submit "Update my details"  %>
+<% end %>
+
+<% if flash[:notice].present? || flash[:errors].present? %>
+    <h2><%= flash[:notice] %></h2>
+<% end %>

@@ -25,7 +25,10 @@ class UsersController < ApplicationController
   end
 
   def update
-    
+    user = User.find params[:id]
+    user.update user_profile_params
+    flash[:notice] = "Your details have been updated!"
+    redirect_to edit_user_path(user.id)
   end
 
   def destroy
@@ -38,5 +41,9 @@ class UsersController < ApplicationController
   private
   def user_params
     params.require(:user).permit(:email, :password, :password_confirmation)
+  end
+
+  def user_profile_params
+    params.require(:user).permit(:email, :nickname, :profile_image)
   end
 end
