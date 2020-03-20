@@ -8,6 +8,10 @@
     <%= submit_tag "Search" %>
 <% end %>
 
+<% if flash[:error].present? %>
+    <h2><%= flash[:error] %></h2>
+<% end %>
+
 <h3>Check out the latest entries to the site:</h3>
 <div class="latest_additions">
     <div class="latest_container">
@@ -27,7 +31,3 @@
         <p><span class="latest_label"><%= @latest_special.name %></span> is ready to rock and roll! (click the preview/link above to view the exciting details!)</p>
     </div>
 </div>
-
-<% if flash[:error].present? %>
-    <h2><%= flash[:error] %></h2>
-<% end %>

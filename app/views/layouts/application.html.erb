@@ -21,6 +21,9 @@
             <%= link_to "Sign in", login_path %>
           <% end %>
         </nav>
+        <% if @current_user.present? && @current_user.administrator %>
+          <h1>Logged in as an Administrator</h1>
+        <% end %>
         <div class="div_break"></div>
       </header>
       <div class="container">

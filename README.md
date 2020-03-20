@@ -1,24 +1,9 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is my first project on rails, the project's basis is the beginnings of a Super Smash Brothers wiki
 
-Things you may want to cover:
+## Technology used
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* Rails version: 5.2.4.1
+* Ruby version: 2.7.0 
+* Heroku 7.39.0
