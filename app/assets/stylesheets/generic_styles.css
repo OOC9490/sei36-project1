@@ -8,7 +8,6 @@ body{
     margin:0;
     font-family: 'Ubuntu', sans-serif;
     box-sizing: border-box;
-    background: linear-gradient(to bottom right, #870000, #160b0b , #190A05) ;
     min-height: 100%;
     display: grid;
     grid-template-rows: 1fr auto;
@@ -88,6 +87,11 @@ a:hover{
 .user_verification a:hover{
     text-decoration: none;
     background: linear-gradient( #fff, rgb(116, 116, 116), #fff);
+}
+
+.site_wrapper {
+    box-sizing: border-box;
+    background: linear-gradient(to bottom right, #870000, #160b0b , #190A05);
 }
 
 .container{

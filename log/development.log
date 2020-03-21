@@ -17702,3 +17702,174 @@ Processing by PagesController#index as HTML
 Completed 200 OK in 194ms (Views: 162.7ms | ActiveRecord: 11.5ms)
 
 
+Started GET "/fighters" for ::1 at 2020-03-21 15:08:13 +1100
+Processing by FightersController#index as HTML
+  Rendering fighters/index.html.erb within layouts/application
+  [1m[36mFighter Load (0.6ms)[0m  [1m[34mSELECT "fighters".* FROM "fighters"[0m
+  ↳ app/views/fighters/index.html.erb:4
+  Rendered fighters/index.html.erb within layouts/application (15.8ms)
+Completed 200 OK in 40ms (Views: 37.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2020-03-21 15:10:34 +1100
+Processing by PagesController#index as HTML
+  [1m[36mFighter Load (5.3ms)[0m  [1m[34mSELECT  "fighters".* FROM "fighters" ORDER BY entry_created DESC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:3
+  [1m[36mSpecial Load (3.4ms)[0m  [1m[34mSELECT  "specials".* FROM "specials" ORDER BY entry_created DESC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:4
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 41ms (Views: 22.8ms | ActiveRecord: 8.7ms)
+
+
+  [1m[36mSpecial Load (2.9ms)[0m  [1m[34mSELECT "specials".* FROM "specials"[0m
+Started GET "/" for ::1 at 2020-03-21 15:36:40 +1100
+Processing by PagesController#index as HTML
+  [1m[36mFighter Load (1.5ms)[0m  [1m[34mSELECT  "fighters".* FROM "fighters" ORDER BY entry_created DESC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:3
+  [1m[36mSpecial Load (0.9ms)[0m  [1m[34mSELECT  "specials".* FROM "specials" ORDER BY entry_created DESC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:4
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 57ms (Views: 50.6ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/" for ::1 at 2020-03-21 15:37:04 +1100
+Processing by PagesController#index as HTML
+  [1m[36mFighter Load (5.2ms)[0m  [1m[34mSELECT  "fighters".* FROM "fighters" ORDER BY entry_created DESC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:3
+  [1m[36mSpecial Load (2.2ms)[0m  [1m[34mSELECT  "specials".* FROM "specials" ORDER BY entry_created DESC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:4
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 74ms (Views: 57.4ms | ActiveRecord: 7.4ms)
+
+
+Started GET "/" for ::1 at 2020-03-21 15:37:05 +1100
+Processing by PagesController#index as HTML
+  [1m[36mFighter Load (2.9ms)[0m  [1m[34mSELECT  "fighters".* FROM "fighters" ORDER BY entry_created DESC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:3
+  [1m[36mSpecial Load (1.3ms)[0m  [1m[34mSELECT  "specials".* FROM "specials" ORDER BY entry_created DESC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:4
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 36ms (Views: 26.8ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/" for ::1 at 2020-03-21 15:38:16 +1100
+Processing by PagesController#index as HTML
+  [1m[36mFighter Load (0.8ms)[0m  [1m[34mSELECT  "fighters".* FROM "fighters" ORDER BY entry_created DESC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:3
+  [1m[36mSpecial Load (1.3ms)[0m  [1m[34mSELECT  "specials".* FROM "specials" ORDER BY entry_created DESC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:4
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (8.6ms)
+Completed 200 OK in 77ms (Views: 67.8ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/" for ::1 at 2020-03-21 15:38:46 +1100
+Processing by PagesController#index as HTML
+  [1m[36mFighter Load (1.8ms)[0m  [1m[34mSELECT  "fighters".* FROM "fighters" ORDER BY entry_created DESC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:3
+  [1m[36mSpecial Load (1.4ms)[0m  [1m[34mSELECT  "specials".* FROM "specials" ORDER BY entry_created DESC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:4
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 87ms (Views: 79.8ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/" for ::1 at 2020-03-21 15:39:37 +1100
+Processing by PagesController#index as HTML
+  [1m[36mFighter Load (2.5ms)[0m  [1m[34mSELECT  "fighters".* FROM "fighters" ORDER BY entry_created DESC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:3
+  [1m[36mSpecial Load (2.1ms)[0m  [1m[34mSELECT  "specials".* FROM "specials" ORDER BY entry_created DESC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:4
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 59ms (Views: 41.2ms | ActiveRecord: 4.6ms)
+
+
+Started GET "/" for ::1 at 2020-03-21 15:41:31 +1100
+Processing by PagesController#index as HTML
+  [1m[36mFighter Load (3.0ms)[0m  [1m[34mSELECT  "fighters".* FROM "fighters" ORDER BY entry_created DESC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:3
+  [1m[36mSpecial Load (3.5ms)[0m  [1m[34mSELECT  "specials".* FROM "specials" ORDER BY entry_created DESC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:4
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (7.8ms)
+Completed 200 OK in 159ms (Views: 129.7ms | ActiveRecord: 6.4ms)
+
+
+Started GET "/" for ::1 at 2020-03-21 15:42:12 +1100
+Processing by PagesController#index as HTML
+  [1m[36mFighter Load (2.4ms)[0m  [1m[34mSELECT  "fighters".* FROM "fighters" ORDER BY entry_created DESC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:3
+  [1m[36mSpecial Load (1.7ms)[0m  [1m[34mSELECT  "specials".* FROM "specials" ORDER BY entry_created DESC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:4
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 71ms (Views: 59.3ms | ActiveRecord: 4.1ms)
+
+
+Started GET "/specials" for ::1 at 2020-03-21 15:42:20 +1100
+Processing by SpecialsController#index as HTML
+  Rendering specials/index.html.erb within layouts/application
+  [1m[36mFighter Load (0.8ms)[0m  [1m[34mSELECT "fighters".* FROM "fighters"[0m
+  ↳ app/views/specials/index.html.erb:5
+  [1m[36mSpecial Load (0.8ms)[0m  [1m[34mSELECT "specials".* FROM "specials"[0m
+  ↳ app/views/specials/index.html.erb:8
+  [1m[36mFighter Load (0.5ms)[0m  [1m[34mSELECT  "fighters".* FROM "fighters" WHERE "fighters"."id" = $1 LIMIT $2[0m  [["id", 54], ["LIMIT", 1]]
+  ↳ app/views/specials/index.html.erb:9
+  [1m[36mFighter Load (0.8ms)[0m  [1m[34mSELECT  "fighters".* FROM "fighters" WHERE "fighters"."id" = $1 LIMIT $2[0m  [["id", 51], ["LIMIT", 1]]
+  ↳ app/views/specials/index.html.erb:9
+  [1m[36mCACHE Fighter Load (0.0ms)[0m  [1m[34mSELECT  "fighters".* FROM "fighters" WHERE "fighters"."id" = $1 LIMIT $2[0m  [["id", 51], ["LIMIT", 1]]
+  ↳ app/views/specials/index.html.erb:9
+  [1m[36mCACHE Fighter Load (0.1ms)[0m  [1m[34mSELECT  "fighters".* FROM "fighters" WHERE "fighters"."id" = $1 LIMIT $2[0m  [["id", 51], ["LIMIT", 1]]
+  ↳ app/views/specials/index.html.erb:9
+  [1m[36mCACHE Fighter Load (0.0ms)[0m  [1m[34mSELECT  "fighters".* FROM "fighters" WHERE "fighters"."id" = $1 LIMIT $2[0m  [["id", 51], ["LIMIT", 1]]
+  ↳ app/views/specials/index.html.erb:9
+  [1m[36mFighter Load (0.5ms)[0m  [1m[34mSELECT  "fighters".* FROM "fighters" WHERE "fighters"."id" = $1 LIMIT $2[0m  [["id", 52], ["LIMIT", 1]]
+  ↳ app/views/specials/index.html.erb:9
+  [1m[36mCACHE Fighter Load (0.0ms)[0m  [1m[34mSELECT  "fighters".* FROM "fighters" WHERE "fighters"."id" = $1 LIMIT $2[0m  [["id", 52], ["LIMIT", 1]]
+  ↳ app/views/specials/index.html.erb:9
+  [1m[36mCACHE Fighter Load (0.0ms)[0m  [1m[34mSELECT  "fighters".* FROM "fighters" WHERE "fighters"."id" = $1 LIMIT $2[0m  [["id", 52], ["LIMIT", 1]]
+  ↳ app/views/specials/index.html.erb:9
+  [1m[36mCACHE Fighter Load (0.0ms)[0m  [1m[34mSELECT  "fighters".* FROM "fighters" WHERE "fighters"."id" = $1 LIMIT $2[0m  [["id", 52], ["LIMIT", 1]]
+  ↳ app/views/specials/index.html.erb:9
+  [1m[36mFighter Load (1.0ms)[0m  [1m[34mSELECT  "fighters".* FROM "fighters" WHERE "fighters"."id" = $1 LIMIT $2[0m  [["id", 55], ["LIMIT", 1]]
+  ↳ app/views/specials/index.html.erb:9
+  [1m[36mCACHE Fighter Load (0.1ms)[0m  [1m[34mSELECT  "fighters".* FROM "fighters" WHERE "fighters"."id" = $1 LIMIT $2[0m  [["id", 55], ["LIMIT", 1]]
+  ↳ app/views/specials/index.html.erb:9
+  [1m[36mCACHE Fighter Load (0.0ms)[0m  [1m[34mSELECT  "fighters".* FROM "fighters" WHERE "fighters"."id" = $1 LIMIT $2[0m  [["id", 55], ["LIMIT", 1]]
+  ↳ app/views/specials/index.html.erb:9
+  [1m[36mCACHE Fighter Load (0.0ms)[0m  [1m[34mSELECT  "fighters".* FROM "fighters" WHERE "fighters"."id" = $1 LIMIT $2[0m  [["id", 55], ["LIMIT", 1]]
+  ↳ app/views/specials/index.html.erb:9
+  [1m[36mFighter Load (0.7ms)[0m  [1m[34mSELECT  "fighters".* FROM "fighters" WHERE "fighters"."id" = $1 LIMIT $2[0m  [["id", 53], ["LIMIT", 1]]
+  ↳ app/views/specials/index.html.erb:9
+  [1m[36mCACHE Fighter Load (0.0ms)[0m  [1m[34mSELECT  "fighters".* FROM "fighters" WHERE "fighters"."id" = $1 LIMIT $2[0m  [["id", 53], ["LIMIT", 1]]
+  ↳ app/views/specials/index.html.erb:9
+  [1m[36mCACHE Fighter Load (0.0ms)[0m  [1m[34mSELECT  "fighters".* FROM "fighters" WHERE "fighters"."id" = $1 LIMIT $2[0m  [["id", 53], ["LIMIT", 1]]
+  ↳ app/views/specials/index.html.erb:9
+  [1m[36mCACHE Fighter Load (0.0ms)[0m  [1m[34mSELECT  "fighters".* FROM "fighters" WHERE "fighters"."id" = $1 LIMIT $2[0m  [["id", 53], ["LIMIT", 1]]
+  ↳ app/views/specials/index.html.erb:9
+  [1m[36mCACHE Fighter Load (0.0ms)[0m  [1m[34mSELECT  "fighters".* FROM "fighters" WHERE "fighters"."id" = $1 LIMIT $2[0m  [["id", 54], ["LIMIT", 1]]
+  ↳ app/views/specials/index.html.erb:9
+  [1m[36mCACHE Fighter Load (0.0ms)[0m  [1m[34mSELECT  "fighters".* FROM "fighters" WHERE "fighters"."id" = $1 LIMIT $2[0m  [["id", 54], ["LIMIT", 1]]
+  ↳ app/views/specials/index.html.erb:9
+  [1m[36mCACHE Fighter Load (0.0ms)[0m  [1m[34mSELECT  "fighters".* FROM "fighters" WHERE "fighters"."id" = $1 LIMIT $2[0m  [["id", 54], ["LIMIT", 1]]
+  ↳ app/views/specials/index.html.erb:9
+  Rendered specials/index.html.erb within layouts/application (75.8ms)
+Completed 200 OK in 186ms (Views: 176.2ms | ActiveRecord: 6.0ms)
+
+
+Started GET "/" for ::1 at 2020-03-21 15:42:25 +1100
+Processing by PagesController#index as HTML
+  [1m[36mFighter Load (1.5ms)[0m  [1m[34mSELECT  "fighters".* FROM "fighters" ORDER BY entry_created DESC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:3
+  [1m[36mSpecial Load (0.6ms)[0m  [1m[34mSELECT  "specials".* FROM "specials" ORDER BY entry_created DESC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:4
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 50ms (Views: 42.6ms | ActiveRecord: 2.0ms)
+
+
