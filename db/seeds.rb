@@ -16,7 +16,7 @@ c1 = Fighter.create(
     :availability => "Unlockable",
     :image => "/assets/wolf_fullbody.png",
     :final_smash => "/assets/wolf_final.gif",
-    :entry_created => DateTime.now.strftime("%Y/%m/%d")
+    :entry_created => DateTime.now.strftime("%Y/%m/%d %H:%M:%S")
 )
 
 c2 = Fighter.create(
@@ -26,7 +26,7 @@ c2 = Fighter.create(
     :availability => "Unlockable",
     :image => "/assets/toonlink_fullbody.png",
     :final_smash => "/assets/toonlink_final.gif",
-    :entry_created => DateTime.now.strftime("%Y/%m/%d")
+    :entry_created => DateTime.now.strftime("%Y/%m/%d %H:%M:%S")
 )
 
 c3 = Fighter.create(
@@ -36,7 +36,7 @@ c3 = Fighter.create(
     :availability => "Unlockable",
     :image => "/assets/lucina_fullbody.png",
     :final_smash => "/assets/lucina_final.gif",
-    :entry_created => DateTime.now.strftime("%Y/%m/%d")
+    :entry_created => DateTime.now.strftime("%Y/%m/%d %H:%M:%S")
 )
 
 c4 = Fighter.create(
@@ -46,7 +46,7 @@ c4 = Fighter.create(
     :availability => "Unlockable",
     :image => "/assets/peach_fullbody.png",
     :final_smash => "/assets/peach_final.gif",
-    :entry_created => DateTime.now.strftime("%Y/%m/%d")
+    :entry_created => DateTime.now.strftime("%Y/%m/%d %H:%M:%S")
 )
 
 c5 = Fighter.create(
@@ -56,7 +56,7 @@ c5 = Fighter.create(
     :availability => "Unlockable",
     :image => "/assets/pikachu_fullbody.png",
     :final_smash => "/assets/pikachu_final.gif",
-    :entry_created => DateTime.now.strftime("%Y/%m/%d")
+    :entry_created => DateTime.now.strftime("%Y/%m/%d %H:%M:%S")
 )
 
 puts "#{Fighter.count} Fighters were made!"
@@ -71,7 +71,7 @@ s1 = Special.create(
     :attack_type => "Projectile",
     :damage_dealt => "7% (base)",
     :preview => "/assets/wolf_neutralb.gif",
-    :entry_created => DateTime.now.strftime("%Y/%m/%d")
+    :entry_created => DateTime.now.strftime("%Y/%m/%d %H:%M:%S")
 )
 
 s2 = Special.create(
@@ -80,7 +80,7 @@ s2 = Special.create(
     :attack_type => "Melee/ Recovery",
     :damage_dealt => "3%-15% (base)",
     :preview => "/assets/wolf_sideb.gif",
-    :entry_created => DateTime.now.strftime("%Y/%m/%d")
+    :entry_created => DateTime.now.strftime("%Y/%m/%d %H:%M:%S")
 )
 
 s3 = Special.create(
@@ -89,7 +89,7 @@ s3 = Special.create(
     :attack_type => "Melee/ Recovery",
     :damage_dealt => "11.5% (base)",
     :preview => "/assets/wolf_upb.gif",
-    :entry_created => DateTime.now.strftime("%Y/%m/%d")
+    :entry_created => DateTime.now.strftime("%Y/%m/%d %H:%M:%S")
 )
 
 s4 = Special.create(
@@ -98,7 +98,7 @@ s4 = Special.create(
     :attack_type => "Melee/ Reflector",
     :damage_dealt => "4% (base)",
     :preview => "/assets/wolf_downb.gif",
-    :entry_created => DateTime.now.strftime("%Y/%m/%d")
+    :entry_created => DateTime.now.strftime("%Y/%m/%d %H:%M:%S")
 )
 
 c1.specials << s1 << s2 << s3 << s4
@@ -110,7 +110,7 @@ s5 = Special.create(
     :attack_type => "Projectile",
     :damage_dealt => "4-12% (base)",
     :preview => "/assets/toonlink_neutralb.gif",
-    :entry_created => DateTime.now.strftime("%Y/%m/%d")
+    :entry_created => DateTime.now.strftime("%Y/%m/%d %H:%M:%S")
 )
 
 s6 = Special.create(
@@ -119,7 +119,7 @@ s6 = Special.create(
     :attack_type => "Projectile",
     :damage_dealt => "3-9.6% (base)",
     :preview => "/assets/toonlink_sideb.gif",
-    :entry_created => DateTime.now.strftime("%Y/%m/%d")
+    :entry_created => DateTime.now.strftime("%Y/%m/%d %H:%M:%S")
 )
 
 s7 = Special.create(
@@ -128,7 +128,7 @@ s7 = Special.create(
     :attack_type => "Melee/ Recovery",
     :damage_dealt => "1-4% (base)",
     :preview => "/assets/toonlink_upb.gif",
-    :entry_created => DateTime.now.strftime("%Y/%m/%d")
+    :entry_created => DateTime.now.strftime("%Y/%m/%d %H:%M:%S")
 )
 
 s8 = Special.create(
@@ -137,7 +137,7 @@ s8 = Special.create(
     :attack_type => "Projectile",
     :damage_dealt => "14% (base)",
     :preview => "/assets/toonlink_downb.gif",
-    :entry_created => DateTime.now.strftime("%Y/%m/%d")
+    :entry_created => DateTime.now.strftime("%Y/%m/%d %H:%M:%S")
 )
 
 c2.specials << s5 << s6 << s7 << s8
@@ -149,7 +149,7 @@ s9 = Special.create(
     :attack_type => "Melee",
     :damage_dealt => "8.5-23% (base)",
     :preview => "/assets/lucina_neutralb.gif",
-    :entry_created => DateTime.now.strftime("%Y/%m/%d")
+    :entry_created => DateTime.now.strftime("%Y/%m/%d %H:%M:%S")
 )
 
 s10 = Special.create(
@@ -158,7 +158,7 @@ s10 = Special.create(
     :attack_type => "Melee",
     :damage_dealt => "2-5.6% (base)",
     :preview => "/assets/lucina_sideb.gif",
-    :entry_created => DateTime.now.strftime("%Y/%m/%d")
+    :entry_created => DateTime.now.strftime("%Y/%m/%d %H:%M:%S")
 )
 
 s11 = Special.create(
@@ -167,7 +167,7 @@ s11 = Special.create(
     :attack_type => "Melee/ Recovery",
     :damage_dealt => "7-11% (base)",
     :preview => "/assets/lucina_upb.gif",
-    :entry_created => DateTime.now.strftime("%Y/%m/%d")
+    :entry_created => DateTime.now.strftime("%Y/%m/%d %H:%M:%S")
 )
 
 s12 = Special.create(
@@ -176,7 +176,7 @@ s12 = Special.create(
     :attack_type => "Counter",
     :damage_dealt => "Varies",
     :preview => "/assets/lucina_downb.gif",
-    :entry_created => DateTime.now.strftime("%Y/%m/%d")
+    :entry_created => DateTime.now.strftime("%Y/%m/%d %H:%M:%S")
 )
 
 c3.specials << s9 << s10 << s11 << s12
@@ -188,7 +188,7 @@ s13 = Special.create(
     :attack_type => "Counter",
     :damage_dealt => "Varies",
     :preview => "/assets/peach_neutralb.gif",
-    :entry_created => DateTime.now.strftime("%Y/%m/%d")
+    :entry_created => DateTime.now.strftime("%Y/%m/%d %H:%M:%S")
 )
 
 s14 = Special.create(
@@ -197,7 +197,7 @@ s14 = Special.create(
     :attack_type => "Melee",
     :damage_dealt => "12% (base)",
     :preview => "/assets/peach_sideb.gif",
-    :entry_created => DateTime.now.strftime("%Y/%m/%d")
+    :entry_created => DateTime.now.strftime("%Y/%m/%d %H:%M:%S")
 )
 
 s15 = Special.create(
@@ -206,7 +206,7 @@ s15 = Special.create(
     :attack_type => "Melee/ Recovery",
     :damage_dealt => "1-4% (base)",
     :preview => "/assets/peach_upb.gif",
-    :entry_created => DateTime.now.strftime("%Y/%m/%d")
+    :entry_created => DateTime.now.strftime("%Y/%m/%d %H:%M:%S")
 )
 
 s16 = Special.create(
@@ -215,7 +215,7 @@ s16 = Special.create(
     :attack_type => "Projectile",
     :damage_dealt => "Varies (based on Turnip type)",
     :preview => "/assets/peach_downb.gif",
-    :entry_created => DateTime.now.strftime("%Y/%m/%d")
+    :entry_created => DateTime.now.strftime("%Y/%m/%d %H:%M:%S")
 )
 
 c4.specials << s13 << s14 << s15 << s16
@@ -227,7 +227,7 @@ s17 = Special.create(
     :attack_type => "Projectile",
     :damage_dealt => "5% (base)",
     :preview => "/assets/pikachu_neutralb.gif",
-    :entry_created => DateTime.now.strftime("%Y/%m/%d")
+    :entry_created => DateTime.now.strftime("%Y/%m/%d %H:%M:%S")
 )
 
 s18 = Special.create(
@@ -236,7 +236,7 @@ s18 = Special.create(
     :attack_type => "Melee/ Recovery",
     :damage_dealt => "8% (base)",
     :preview => "/assets/pikachu_sideb.gif",
-    :entry_created => DateTime.now.strftime("%Y/%m/%d")
+    :entry_created => DateTime.now.strftime("%Y/%m/%d %H:%M:%S")
 )
 
 s19 = Special.create(
@@ -245,7 +245,7 @@ s19 = Special.create(
     :attack_type => "Melee/ Recovery",
     :damage_dealt => "2% (base)",
     :preview => "/assets/pikachu_upb.gif",
-    :entry_created => DateTime.now.strftime("%Y/%m/%d")
+    :entry_created => DateTime.now.strftime("%Y/%m/%d %H:%M:%S")
 )
 
 s20 = Special.create(
@@ -254,7 +254,7 @@ s20 = Special.create(
     :attack_type => "Projectile/ Melee",
     :damage_dealt => "12% (base)",
     :preview => "/assets/pikachu_downb.gif",
-    :entry_created => DateTime.now.strftime("%Y/%m/%d")
+    :entry_created => DateTime.now.strftime("%Y/%m/%d %H:%M:%S")
 )
 
 c5.specials << s17 << s18 << s19 << s20
