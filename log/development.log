@@ -21558,3 +21558,1011 @@ Processing by FightersController#show as HTML
 Completed 200 OK in 99ms (Views: 50.5ms | ActiveRecord: 27.0ms)
 
 
+Started GET "/" for ::1 at 2020-03-21 17:15:26 +1100
+Processing by PagesController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 38], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+  [1m[36mFighter Load (1.1ms)[0m  [1m[34mSELECT  "fighters".* FROM "fighters" ORDER BY entry_created DESC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:3
+  [1m[36mSpecial Load (3.5ms)[0m  [1m[34mSELECT  "specials".* FROM "specials" ORDER BY entry_created DESC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:4
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 30ms (Views: 17.8ms | ActiveRecord: 7.1ms)
+
+
+Started GET "/specials" for ::1 at 2020-03-21 17:16:35 +1100
+Processing by SpecialsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 38], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+  Rendering specials/index.html.erb within layouts/application
+  [1m[36mFighter Load (0.5ms)[0m  [1m[34mSELECT "fighters".* FROM "fighters"[0m
+  ↳ app/views/specials/index.html.erb:5
+  [1m[36mSpecial Load (0.5ms)[0m  [1m[34mSELECT "specials".* FROM "specials"[0m
+  ↳ app/views/specials/index.html.erb:8
+  [1m[36mFighter Load (0.6ms)[0m  [1m[34mSELECT  "fighters".* FROM "fighters" WHERE "fighters"."id" = $1 LIMIT $2[0m  [["id", 74], ["LIMIT", 1]]
+  ↳ app/views/specials/index.html.erb:9
+  [1m[36mCACHE Fighter Load (0.0ms)[0m  [1m[34mSELECT  "fighters".* FROM "fighters" WHERE "fighters"."id" = $1 LIMIT $2[0m  [["id", 74], ["LIMIT", 1]]
+  ↳ app/views/specials/index.html.erb:9
+  [1m[36mCACHE Fighter Load (0.0ms)[0m  [1m[34mSELECT  "fighters".* FROM "fighters" WHERE "fighters"."id" = $1 LIMIT $2[0m  [["id", 74], ["LIMIT", 1]]
+  ↳ app/views/specials/index.html.erb:9
+  [1m[36mCACHE Fighter Load (0.0ms)[0m  [1m[34mSELECT  "fighters".* FROM "fighters" WHERE "fighters"."id" = $1 LIMIT $2[0m  [["id", 74], ["LIMIT", 1]]
+  ↳ app/views/specials/index.html.erb:9
+  [1m[36mFighter Load (0.4ms)[0m  [1m[34mSELECT  "fighters".* FROM "fighters" WHERE "fighters"."id" = $1 LIMIT $2[0m  [["id", 71], ["LIMIT", 1]]
+  ↳ app/views/specials/index.html.erb:9
+  [1m[36mCACHE Fighter Load (0.0ms)[0m  [1m[34mSELECT  "fighters".* FROM "fighters" WHERE "fighters"."id" = $1 LIMIT $2[0m  [["id", 71], ["LIMIT", 1]]
+  ↳ app/views/specials/index.html.erb:9
+  [1m[36mCACHE Fighter Load (0.0ms)[0m  [1m[34mSELECT  "fighters".* FROM "fighters" WHERE "fighters"."id" = $1 LIMIT $2[0m  [["id", 71], ["LIMIT", 1]]
+  ↳ app/views/specials/index.html.erb:9
+  [1m[36mCACHE Fighter Load (0.0ms)[0m  [1m[34mSELECT  "fighters".* FROM "fighters" WHERE "fighters"."id" = $1 LIMIT $2[0m  [["id", 71], ["LIMIT", 1]]
+  ↳ app/views/specials/index.html.erb:9
+  [1m[36mFighter Load (1.3ms)[0m  [1m[34mSELECT  "fighters".* FROM "fighters" WHERE "fighters"."id" = $1 LIMIT $2[0m  [["id", 75], ["LIMIT", 1]]
+  ↳ app/views/specials/index.html.erb:9
+  [1m[36mCACHE Fighter Load (0.0ms)[0m  [1m[34mSELECT  "fighters".* FROM "fighters" WHERE "fighters"."id" = $1 LIMIT $2[0m  [["id", 75], ["LIMIT", 1]]
+  ↳ app/views/specials/index.html.erb:9
+  [1m[36mCACHE Fighter Load (0.0ms)[0m  [1m[34mSELECT  "fighters".* FROM "fighters" WHERE "fighters"."id" = $1 LIMIT $2[0m  [["id", 75], ["LIMIT", 1]]
+  ↳ app/views/specials/index.html.erb:9
+  [1m[36mCACHE Fighter Load (0.0ms)[0m  [1m[34mSELECT  "fighters".* FROM "fighters" WHERE "fighters"."id" = $1 LIMIT $2[0m  [["id", 75], ["LIMIT", 1]]
+  ↳ app/views/specials/index.html.erb:9
+  [1m[36mFighter Load (0.6ms)[0m  [1m[34mSELECT  "fighters".* FROM "fighters" WHERE "fighters"."id" = $1 LIMIT $2[0m  [["id", 72], ["LIMIT", 1]]
+  ↳ app/views/specials/index.html.erb:9
+  [1m[36mCACHE Fighter Load (0.0ms)[0m  [1m[34mSELECT  "fighters".* FROM "fighters" WHERE "fighters"."id" = $1 LIMIT $2[0m  [["id", 72], ["LIMIT", 1]]
+  ↳ app/views/specials/index.html.erb:9
+  [1m[36mCACHE Fighter Load (0.0ms)[0m  [1m[34mSELECT  "fighters".* FROM "fighters" WHERE "fighters"."id" = $1 LIMIT $2[0m  [["id", 72], ["LIMIT", 1]]
+  ↳ app/views/specials/index.html.erb:9
+  [1m[36mCACHE Fighter Load (0.0ms)[0m  [1m[34mSELECT  "fighters".* FROM "fighters" WHERE "fighters"."id" = $1 LIMIT $2[0m  [["id", 72], ["LIMIT", 1]]
+  ↳ app/views/specials/index.html.erb:9
+  [1m[36mFighter Load (0.4ms)[0m  [1m[34mSELECT  "fighters".* FROM "fighters" WHERE "fighters"."id" = $1 LIMIT $2[0m  [["id", 73], ["LIMIT", 1]]
+  ↳ app/views/specials/index.html.erb:9
+  [1m[36mCACHE Fighter Load (0.0ms)[0m  [1m[34mSELECT  "fighters".* FROM "fighters" WHERE "fighters"."id" = $1 LIMIT $2[0m  [["id", 73], ["LIMIT", 1]]
+  ↳ app/views/specials/index.html.erb:9
+  [1m[36mCACHE Fighter Load (0.0ms)[0m  [1m[34mSELECT  "fighters".* FROM "fighters" WHERE "fighters"."id" = $1 LIMIT $2[0m  [["id", 73], ["LIMIT", 1]]
+  ↳ app/views/specials/index.html.erb:9
+  [1m[36mCACHE Fighter Load (0.0ms)[0m  [1m[34mSELECT  "fighters".* FROM "fighters" WHERE "fighters"."id" = $1 LIMIT $2[0m  [["id", 73], ["LIMIT", 1]]
+  ↳ app/views/specials/index.html.erb:9
+  Rendered specials/index.html.erb within layouts/application (29.8ms)
+Completed 200 OK in 50ms (Views: 43.1ms | ActiveRecord: 4.8ms)
+
+
+Started GET "/fighters" for ::1 at 2020-03-21 17:16:36 +1100
+Processing by FightersController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 38], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+  Rendering fighters/index.html.erb within layouts/application
+  [1m[36mFighter Load (0.4ms)[0m  [1m[34mSELECT "fighters".* FROM "fighters"[0m
+  ↳ app/views/fighters/index.html.erb:4
+  Rendered fighters/index.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 48ms (Views: 40.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/fighters/71" for ::1 at 2020-03-21 17:16:37 +1100
+Processing by FightersController#show as HTML
+  Parameters: {"id"=>"71"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 38], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+  [1m[36mFighter Load (0.8ms)[0m  [1m[34mSELECT  "fighters".* FROM "fighters" WHERE "fighters"."id" = $1 LIMIT $2[0m  [["id", 71], ["LIMIT", 1]]
+  ↳ app/controllers/fighters_controller.rb:30
+  Rendering fighters/show.html.erb within layouts/application
+  [1m[36mGame Load (2.8ms)[0m  [1m[34mSELECT "games".* FROM "games" INNER JOIN "fighters_games" ON "games"."id" = "fighters_games"."game_id" WHERE "fighters_games"."fighter_id" = $1[0m  [["fighter_id", 71]]
+  ↳ app/views/fighters/show.html.erb:12
+  [1m[36mSpecial Load (0.3ms)[0m  [1m[34mSELECT "specials".* FROM "specials" WHERE "specials"."fighter_id" = $1[0m  [["fighter_id", 71]]
+  ↳ app/views/fighters/show.html.erb:18
+  Rendered fighters/show.html.erb within layouts/application (25.4ms)
+Completed 200 OK in 52ms (Views: 40.4ms | ActiveRecord: 4.7ms)
+
+
+Started GET "/fighters" for ::1 at 2020-03-21 17:16:47 +1100
+Processing by FightersController#index as HTML
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 38], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+  Rendering fighters/index.html.erb within layouts/application
+  [1m[36mFighter Load (0.5ms)[0m  [1m[34mSELECT "fighters".* FROM "fighters"[0m
+  ↳ app/views/fighters/index.html.erb:4
+  Rendered fighters/index.html.erb within layouts/application (9.4ms)
+Completed 200 OK in 67ms (Views: 60.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/fighters/new" for ::1 at 2020-03-21 17:16:49 +1100
+Processing by FightersController#new as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 38], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+  Rendering fighters/new.html.erb within layouts/application
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "games"."name", "games"."id" FROM "games"[0m
+  ↳ app/views/fighters/_form.html.erb:15
+  Rendered fighters/_form.html.erb (14.4ms)
+  Rendered fighters/new.html.erb within layouts/application (18.4ms)
+Completed 200 OK in 63ms (Views: 52.5ms | ActiveRecord: 1.8ms)
+
+
+  [1m[36mFighter Load (1.8ms)[0m  [1m[34mSELECT  "fighters".* FROM "fighters" ORDER BY "fighters"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mFighter Load (1.4ms)[0m  [1m[34mSELECT  "fighters".* FROM "fighters" ORDER BY "fighters"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mFighter Load (1.1ms)[0m  [1m[34mSELECT  "fighters".* FROM "fighters" ORDER BY "fighters"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mFighter Load (0.6ms)[0m  [1m[34mSELECT  "fighters".* FROM "fighters" ORDER BY "fighters"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mFighter Load (0.4ms)[0m  [1m[34mSELECT  "fighters".* FROM "fighters" ORDER BY "fighters"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mFighter Load (0.6ms)[0m  [1m[34mSELECT  "fighters".* FROM "fighters" ORDER BY "fighters"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mFighter Load (0.6ms)[0m  [1m[34mSELECT  "fighters".* FROM "fighters" ORDER BY "fighters"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mFighter Load (0.6ms)[0m  [1m[34mSELECT  "fighters".* FROM "fighters" ORDER BY "fighters"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mFighter Load (0.5ms)[0m  [1m[34mSELECT  "fighters".* FROM "fighters" ORDER BY "fighters"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mFighter Load (0.5ms)[0m  [1m[34mSELECT  "fighters".* FROM "fighters" ORDER BY "fighters"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mFighter Load (0.5ms)[0m  [1m[34mSELECT  "fighters".* FROM "fighters" ORDER BY "fighters"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mFighter Load (1.2ms)[0m  [1m[34mSELECT  "fighters".* FROM "fighters" ORDER BY "fighters"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mFighter Load (0.8ms)[0m  [1m[34mSELECT  "fighters".* FROM "fighters" ORDER BY "fighters"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mFighter Load (1.4ms)[0m  [1m[34mSELECT  "fighters".* FROM "fighters" ORDER BY "fighters"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mFighter Load (0.7ms)[0m  [1m[34mSELECT  "fighters".* FROM "fighters" ORDER BY "fighters"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+Started GET "/" for ::1 at 2020-03-21 22:37:56 +1100
+  [1m[35m (2.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/mojave-vm/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Processing by PagesController#index as HTML
+  [1m[36mFighter Load (1.7ms)[0m  [1m[34mSELECT  "fighters".* FROM "fighters" ORDER BY entry_created DESC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:3
+  [1m[36mSpecial Load (2.2ms)[0m  [1m[34mSELECT  "specials".* FROM "specials" ORDER BY entry_created DESC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:4
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (9.8ms)
+Completed 200 OK in 404ms (Views: 355.9ms | ActiveRecord: 15.2ms)
+
+
+Started GET "/fighters/71" for ::1 at 2020-03-21 22:38:00 +1100
+Processing by FightersController#show as HTML
+  Parameters: {"id"=>"71"}
+  [1m[36mFighter Load (0.9ms)[0m  [1m[34mSELECT  "fighters".* FROM "fighters" WHERE "fighters"."id" = $1 LIMIT $2[0m  [["id", 71], ["LIMIT", 1]]
+  ↳ app/controllers/fighters_controller.rb:30
+  Rendering fighters/show.html.erb within layouts/application
+  [1m[36mGame Load (4.0ms)[0m  [1m[34mSELECT "games".* FROM "games" INNER JOIN "fighters_games" ON "games"."id" = "fighters_games"."game_id" WHERE "fighters_games"."fighter_id" = $1[0m  [["fighter_id", 71]]
+  ↳ app/views/fighters/show.html.erb:12
+  [1m[36mSpecial Load (0.8ms)[0m  [1m[34mSELECT "specials".* FROM "specials" WHERE "specials"."fighter_id" = $1[0m  [["fighter_id", 71]]
+  ↳ app/views/fighters/show.html.erb:18
+  Rendered fighters/show.html.erb within layouts/application (63.4ms)
+Completed 200 OK in 108ms (Views: 76.3ms | ActiveRecord: 17.5ms)
+
+
+Started GET "/" for ::1 at 2020-03-21 22:38:20 +1100
+Processing by PagesController#index as HTML
+  [1m[36mFighter Load (3.6ms)[0m  [1m[34mSELECT  "fighters".* FROM "fighters" ORDER BY entry_created DESC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:3
+  [1m[36mSpecial Load (3.1ms)[0m  [1m[34mSELECT  "specials".* FROM "specials" ORDER BY entry_created DESC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:4
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 30ms (Views: 17.5ms | ActiveRecord: 6.7ms)
+
+
+Started GET "/" for ::1 at 2020-03-21 22:38:21 +1100
+Processing by PagesController#index as HTML
+  [1m[36mFighter Load (0.5ms)[0m  [1m[34mSELECT  "fighters".* FROM "fighters" ORDER BY entry_created DESC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:3
+  [1m[36mSpecial Load (0.4ms)[0m  [1m[34mSELECT  "specials".* FROM "specials" ORDER BY entry_created DESC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:4
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 23ms (Views: 17.9ms | ActiveRecord: 0.9ms)
+
+
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/mojave-vm/.rvm/rubies/ruby-2.7.0/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ db/seeds.rb:1
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:1
+  [1m[36mUser Destroy (1.1ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 38]]
+  ↳ db/seeds.rb:1
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:1
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:1
+  [1m[36mUser Destroy (0.5ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 39]]
+  ↳ db/seeds.rb:1
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:1
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:1
+  [1m[36mUser Destroy (0.6ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 40]]
+  ↳ db/seeds.rb:1
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:1
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:1
+  [1m[36mUser Destroy (0.5ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 41]]
+  ↳ db/seeds.rb:1
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:1
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:3
+  [1m[36mUser Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "lcarreon@ga.co"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:3
+  [1m[36mUser Create (3.7ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "profile_image", "nickname", "created_at", "updated_at", "administrator") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["email", "lcarreon@ga.co"], ["password_digest", "$2a$12$lpZH9ZY2ftOqoa09KQLWG.mizpPLo7cCMnQ1TS4Pm/gfKa9DyaSKu"], ["profile_image", "https://i.kym-cdn.com/entries/icons/facebook/000/021/572/maxresdefault.jpg"], ["nickname", "OOC"], ["created_at", "2020-03-21 22:38:49.627854"], ["updated_at", "2020-03-21 22:38:49.627854"], ["administrator", true]]
+  ↳ db/seeds.rb:3
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:3
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:4
+  [1m[36mUser Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "jturnbull@ga.co"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:4
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "created_at", "updated_at", "administrator") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "jturnbull@ga.co"], ["password_digest", "$2a$12$sSPWLmogEunyull/dCX3aeTPcHZWolZlZoc0jpVou5HMDCO6eRvHG"], ["created_at", "2020-03-21 22:38:49.842628"], ["updated_at", "2020-03-21 22:38:49.842628"], ["administrator", true]]
+  ↳ db/seeds.rb:4
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:5
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "abrymora@ga.co"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:5
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "created_at", "updated_at", "administrator") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "abrymora@ga.co"], ["password_digest", "$2a$12$z5FKTdePHQPAs4fIVcMQQuBJS4KtP3r8ZqPDMN9I5Bh1JZSH47ynC"], ["created_at", "2020-03-21 22:38:50.055119"], ["updated_at", "2020-03-21 22:38:50.055119"], ["administrator", true]]
+  ↳ db/seeds.rb:5
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:5
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:6
+  [1m[36mUser Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "test_user@ga.co"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:6
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "created_at", "updated_at", "administrator") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "test_user@ga.co"], ["password_digest", "$2a$12$Ri9xzlBrfA4p1sjM4r3Q9.UITzjEA.H5B9wcLXh3PhF8aq29TIOc."], ["created_at", "2020-03-21 22:38:50.266618"], ["updated_at", "2020-03-21 22:38:50.266618"], ["administrator", false]]
+  ↳ db/seeds.rb:6
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:6
+  [1m[35m (2.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ db/seeds.rb:8
+  [1m[36mFighter Load (1.2ms)[0m  [1m[34mSELECT "fighters".* FROM "fighters"[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mFighter::HABTM_Games Destroy (0.8ms)[0m  [1m[31mDELETE FROM "fighters_games" WHERE "fighters_games"."fighter_id" = $1[0m  [["fighter_id", 71]]
+  ↳ db/seeds.rb:10
+  [1m[36mFighter Destroy (2.1ms)[0m  [1m[31mDELETE FROM "fighters" WHERE "fighters"."id" = $1[0m  [["id", 71]]
+  ↳ db/seeds.rb:10
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mFighter::HABTM_Games Destroy (1.2ms)[0m  [1m[31mDELETE FROM "fighters_games" WHERE "fighters_games"."fighter_id" = $1[0m  [["fighter_id", 72]]
+  ↳ db/seeds.rb:10
+  [1m[36mFighter Destroy (1.4ms)[0m  [1m[31mDELETE FROM "fighters" WHERE "fighters"."id" = $1[0m  [["id", 72]]
+  ↳ db/seeds.rb:10
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mFighter::HABTM_Games Destroy (1.7ms)[0m  [1m[31mDELETE FROM "fighters_games" WHERE "fighters_games"."fighter_id" = $1[0m  [["fighter_id", 73]]
+  ↳ db/seeds.rb:10
+  [1m[36mFighter Destroy (1.7ms)[0m  [1m[31mDELETE FROM "fighters" WHERE "fighters"."id" = $1[0m  [["id", 73]]
+  ↳ db/seeds.rb:10
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mFighter::HABTM_Games Destroy (1.5ms)[0m  [1m[31mDELETE FROM "fighters_games" WHERE "fighters_games"."fighter_id" = $1[0m  [["fighter_id", 74]]
+  ↳ db/seeds.rb:10
+  [1m[36mFighter Destroy (1.3ms)[0m  [1m[31mDELETE FROM "fighters" WHERE "fighters"."id" = $1[0m  [["id", 74]]
+  ↳ db/seeds.rb:10
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mFighter::HABTM_Games Destroy (1.7ms)[0m  [1m[31mDELETE FROM "fighters_games" WHERE "fighters_games"."fighter_id" = $1[0m  [["fighter_id", 75]]
+  ↳ db/seeds.rb:10
+  [1m[36mFighter Destroy (1.6ms)[0m  [1m[31mDELETE FROM "fighters" WHERE "fighters"."id" = $1[0m  [["id", 75]]
+  ↳ db/seeds.rb:10
+  [1m[35m (2.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mFighter Create (3.3ms)[0m  [1m[32mINSERT INTO "fighters" ("name", "stock_symbol", "availability", "image", "final_smash", "created_at", "updated_at", "franchise", "entry_created") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Wolf"], ["stock_symbol", "/assets/wolf_stock.png"], ["availability", "Unlockable"], ["image", "/assets/wolf_fullbody.png"], ["final_smash", "/assets/wolf_final.gif"], ["created_at", "2020-03-21 22:38:50.351645"], ["updated_at", "2020-03-21 22:38:50.351645"], ["franchise", "Starfox"], ["entry_created", "2020-03-21 22:38:50.349309"]]
+  ↳ db/seeds.rb:12
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:22
+  [1m[36mFighter Create (0.5ms)[0m  [1m[32mINSERT INTO "fighters" ("name", "stock_symbol", "availability", "image", "final_smash", "created_at", "updated_at", "franchise", "entry_created") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Toon Link"], ["stock_symbol", "/assets/toonlink_stock.png"], ["availability", "Unlockable"], ["image", "/assets/toonlink_fullbody.png"], ["final_smash", "/assets/toonlink_final.gif"], ["created_at", "2020-03-21 22:38:50.361213"], ["updated_at", "2020-03-21 22:38:50.361213"], ["franchise", "Legend of Zelda"], ["entry_created", "2020-03-21 22:38:50.360063"]]
+  ↳ db/seeds.rb:22
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:22
+  [1m[35m (1.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:32
+  [1m[36mFighter Create (1.5ms)[0m  [1m[32mINSERT INTO "fighters" ("name", "stock_symbol", "availability", "image", "final_smash", "created_at", "updated_at", "franchise", "entry_created") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Lucina"], ["stock_symbol", "/assets/lucina_stock.png"], ["availability", "Unlockable"], ["image", "/assets/lucina_fullbody.png"], ["final_smash", "/assets/lucina_final.gif"], ["created_at", "2020-03-21 22:38:50.367180"], ["updated_at", "2020-03-21 22:38:50.367180"], ["franchise", "Fire Emblem"], ["entry_created", "2020-03-21 22:38:50.364951"]]
+  ↳ db/seeds.rb:32
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:32
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:42
+  [1m[36mFighter Create (0.5ms)[0m  [1m[32mINSERT INTO "fighters" ("name", "stock_symbol", "availability", "image", "final_smash", "created_at", "updated_at", "franchise", "entry_created") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Peach"], ["stock_symbol", "/assets/peach_stock.png"], ["availability", "Unlockable"], ["image", "/assets/peach_fullbody.png"], ["final_smash", "/assets/peach_final.gif"], ["created_at", "2020-03-21 22:38:50.376790"], ["updated_at", "2020-03-21 22:38:50.376790"], ["franchise", "Super Mario"], ["entry_created", "2020-03-21 22:38:50.372659"]]
+  ↳ db/seeds.rb:42
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:42
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:52
+  [1m[36mFighter Create (0.5ms)[0m  [1m[32mINSERT INTO "fighters" ("name", "stock_symbol", "availability", "image", "final_smash", "created_at", "updated_at", "franchise", "entry_created") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Pikachu"], ["stock_symbol", "/assets/pikachu_stock.png"], ["availability", "Unlockable"], ["image", "/assets/pikachu_fullbody.png"], ["final_smash", "/assets/pikachu_final.gif"], ["created_at", "2020-03-21 22:38:50.380218"], ["updated_at", "2020-03-21 22:38:50.380218"], ["franchise", "Pokemon"], ["entry_created", "2020-03-21 22:38:50.379428"]]
+  ↳ db/seeds.rb:52
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:52
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "fighters"[0m
+  ↳ db/seeds.rb:62
+  [1m[36mSpecial Load (0.8ms)[0m  [1m[34mSELECT "specials".* FROM "specials"[0m
+  ↳ db/seeds.rb:65
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:65
+  [1m[36mSpecial Destroy (1.1ms)[0m  [1m[31mDELETE FROM "specials" WHERE "specials"."id" = $1[0m  [["id", 275]]
+  ↳ db/seeds.rb:65
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:65
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:65
+  [1m[36mSpecial Destroy (0.4ms)[0m  [1m[31mDELETE FROM "specials" WHERE "specials"."id" = $1[0m  [["id", 276]]
+  ↳ db/seeds.rb:65
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:65
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:65
+  [1m[36mSpecial Destroy (0.5ms)[0m  [1m[31mDELETE FROM "specials" WHERE "specials"."id" = $1[0m  [["id", 277]]
+  ↳ db/seeds.rb:65
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:65
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:65
+  [1m[36mSpecial Destroy (0.4ms)[0m  [1m[31mDELETE FROM "specials" WHERE "specials"."id" = $1[0m  [["id", 278]]
+  ↳ db/seeds.rb:65
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:65
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:65
+  [1m[36mSpecial Destroy (0.4ms)[0m  [1m[31mDELETE FROM "specials" WHERE "specials"."id" = $1[0m  [["id", 263]]
+  ↳ db/seeds.rb:65
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:65
+  [1m[35m (0.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:65
+  [1m[36mSpecial Destroy (0.9ms)[0m  [1m[31mDELETE FROM "specials" WHERE "specials"."id" = $1[0m  [["id", 264]]
+  ↳ db/seeds.rb:65
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:65
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:65
+  [1m[36mSpecial Destroy (0.4ms)[0m  [1m[31mDELETE FROM "specials" WHERE "specials"."id" = $1[0m  [["id", 265]]
+  ↳ db/seeds.rb:65
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:65
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:65
+  [1m[36mSpecial Destroy (0.5ms)[0m  [1m[31mDELETE FROM "specials" WHERE "specials"."id" = $1[0m  [["id", 266]]
+  ↳ db/seeds.rb:65
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:65
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:65
+  [1m[36mSpecial Destroy (0.3ms)[0m  [1m[31mDELETE FROM "specials" WHERE "specials"."id" = $1[0m  [["id", 279]]
+  ↳ db/seeds.rb:65
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:65
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:65
+  [1m[36mSpecial Destroy (0.3ms)[0m  [1m[31mDELETE FROM "specials" WHERE "specials"."id" = $1[0m  [["id", 280]]
+  ↳ db/seeds.rb:65
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:65
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:65
+  [1m[36mSpecial Destroy (0.4ms)[0m  [1m[31mDELETE FROM "specials" WHERE "specials"."id" = $1[0m  [["id", 281]]
+  ↳ db/seeds.rb:65
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:65
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:65
+  [1m[36mSpecial Destroy (0.3ms)[0m  [1m[31mDELETE FROM "specials" WHERE "specials"."id" = $1[0m  [["id", 282]]
+  ↳ db/seeds.rb:65
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:65
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:65
+  [1m[36mSpecial Destroy (0.4ms)[0m  [1m[31mDELETE FROM "specials" WHERE "specials"."id" = $1[0m  [["id", 267]]
+  ↳ db/seeds.rb:65
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:65
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:65
+  [1m[36mSpecial Destroy (0.6ms)[0m  [1m[31mDELETE FROM "specials" WHERE "specials"."id" = $1[0m  [["id", 268]]
+  ↳ db/seeds.rb:65
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:65
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:65
+  [1m[36mSpecial Destroy (0.5ms)[0m  [1m[31mDELETE FROM "specials" WHERE "specials"."id" = $1[0m  [["id", 269]]
+  ↳ db/seeds.rb:65
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:65
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:65
+  [1m[36mSpecial Destroy (0.4ms)[0m  [1m[31mDELETE FROM "specials" WHERE "specials"."id" = $1[0m  [["id", 270]]
+  ↳ db/seeds.rb:65
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:65
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:65
+  [1m[36mSpecial Destroy (0.4ms)[0m  [1m[31mDELETE FROM "specials" WHERE "specials"."id" = $1[0m  [["id", 271]]
+  ↳ db/seeds.rb:65
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:65
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:65
+  [1m[36mSpecial Destroy (0.6ms)[0m  [1m[31mDELETE FROM "specials" WHERE "specials"."id" = $1[0m  [["id", 272]]
+  ↳ db/seeds.rb:65
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:65
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:65
+  [1m[36mSpecial Destroy (0.4ms)[0m  [1m[31mDELETE FROM "specials" WHERE "specials"."id" = $1[0m  [["id", 273]]
+  ↳ db/seeds.rb:65
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:65
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:65
+  [1m[36mSpecial Destroy (0.4ms)[0m  [1m[31mDELETE FROM "specials" WHERE "specials"."id" = $1[0m  [["id", 274]]
+  ↳ db/seeds.rb:65
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:65
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:68
+  [1m[36mSpecial Create (3.2ms)[0m  [1m[32mINSERT INTO "specials" ("name", "input_direction", "attack_type", "damage_dealt", "preview", "created_at", "updated_at", "entry_created") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Blaster"], ["input_direction", "Neutral"], ["attack_type", "Projectile"], ["damage_dealt", "7% (base)"], ["preview", "/assets/wolf_neutralb.gif"], ["created_at", "2020-03-21 22:38:50.448482"], ["updated_at", "2020-03-21 22:38:50.448482"], ["entry_created", "2020-03-21 22:38:50.447295"]]
+  ↳ db/seeds.rb:68
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:68
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:77
+  [1m[36mSpecial Create (0.6ms)[0m  [1m[32mINSERT INTO "specials" ("name", "input_direction", "attack_type", "damage_dealt", "preview", "created_at", "updated_at", "entry_created") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Wolf Flash"], ["input_direction", "Side"], ["attack_type", "Melee/ Recovery"], ["damage_dealt", "3%-15% (base)"], ["preview", "/assets/wolf_sideb.gif"], ["created_at", "2020-03-21 22:38:50.454439"], ["updated_at", "2020-03-21 22:38:50.454439"], ["entry_created", "2020-03-21 22:38:50.453729"]]
+  ↳ db/seeds.rb:77
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:77
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:86
+  [1m[36mSpecial Create (0.5ms)[0m  [1m[32mINSERT INTO "specials" ("name", "input_direction", "attack_type", "damage_dealt", "preview", "created_at", "updated_at", "entry_created") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Fire Wolf"], ["input_direction", "Up"], ["attack_type", "Melee/ Recovery"], ["damage_dealt", "11.5% (base)"], ["preview", "/assets/wolf_upb.gif"], ["created_at", "2020-03-21 22:38:50.457431"], ["updated_at", "2020-03-21 22:38:50.457431"], ["entry_created", "2020-03-21 22:38:50.456590"]]
+  ↳ db/seeds.rb:86
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:86
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:95
+  [1m[36mSpecial Create (0.4ms)[0m  [1m[32mINSERT INTO "specials" ("name", "input_direction", "attack_type", "damage_dealt", "preview", "created_at", "updated_at", "entry_created") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Reflector"], ["input_direction", "Down"], ["attack_type", "Melee/ Reflector"], ["damage_dealt", "4% (base)"], ["preview", "/assets/wolf_downb.gif"], ["created_at", "2020-03-21 22:38:50.460414"], ["updated_at", "2020-03-21 22:38:50.460414"], ["entry_created", "2020-03-21 22:38:50.459531"]]
+  ↳ db/seeds.rb:95
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:95
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:104
+  [1m[36mSpecial Update (0.6ms)[0m  [1m[33mUPDATE "specials" SET "fighter_id" = $1, "updated_at" = $2 WHERE "specials"."id" = $3[0m  [["fighter_id", 77], ["updated_at", "2020-03-21 22:38:50.465781"], ["id", 283]]
+  ↳ db/seeds.rb:104
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:104
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:104
+  [1m[36mSpecial Update (0.5ms)[0m  [1m[33mUPDATE "specials" SET "fighter_id" = $1, "updated_at" = $2 WHERE "specials"."id" = $3[0m  [["fighter_id", 77], ["updated_at", "2020-03-21 22:38:50.469173"], ["id", 284]]
+  ↳ db/seeds.rb:104
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:104
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:104
+  [1m[36mSpecial Update (0.4ms)[0m  [1m[33mUPDATE "specials" SET "fighter_id" = $1, "updated_at" = $2 WHERE "specials"."id" = $3[0m  [["fighter_id", 77], ["updated_at", "2020-03-21 22:38:50.471963"], ["id", 285]]
+  ↳ db/seeds.rb:104
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:104
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:104
+  [1m[36mSpecial Update (0.4ms)[0m  [1m[33mUPDATE "specials" SET "fighter_id" = $1, "updated_at" = $2 WHERE "specials"."id" = $3[0m  [["fighter_id", 77], ["updated_at", "2020-03-21 22:38:50.474683"], ["id", 286]]
+  ↳ db/seeds.rb:104
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:104
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:107
+  [1m[36mSpecial Create (0.5ms)[0m  [1m[32mINSERT INTO "specials" ("name", "input_direction", "attack_type", "damage_dealt", "preview", "created_at", "updated_at", "entry_created") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Hero's Bow"], ["input_direction", "Neutral"], ["attack_type", "Projectile"], ["damage_dealt", "4-12% (base)"], ["preview", "/assets/toonlink_neutralb.gif"], ["created_at", "2020-03-21 22:38:50.477621"], ["updated_at", "2020-03-21 22:38:50.477621"], ["entry_created", "2020-03-21 22:38:50.476765"]]
+  ↳ db/seeds.rb:107
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:107
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:116
+  [1m[36mSpecial Create (0.4ms)[0m  [1m[32mINSERT INTO "specials" ("name", "input_direction", "attack_type", "damage_dealt", "preview", "created_at", "updated_at", "entry_created") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Boomerang"], ["input_direction", "Side"], ["attack_type", "Projectile"], ["damage_dealt", "3-9.6% (base)"], ["preview", "/assets/toonlink_sideb.gif"], ["created_at", "2020-03-21 22:38:50.480734"], ["updated_at", "2020-03-21 22:38:50.480734"], ["entry_created", "2020-03-21 22:38:50.479911"]]
+  ↳ db/seeds.rb:116
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:116
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:125
+  [1m[36mSpecial Create (0.4ms)[0m  [1m[32mINSERT INTO "specials" ("name", "input_direction", "attack_type", "damage_dealt", "preview", "created_at", "updated_at", "entry_created") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Spin Attack"], ["input_direction", "Up"], ["attack_type", "Melee/ Recovery"], ["damage_dealt", "1-4% (base)"], ["preview", "/assets/toonlink_upb.gif"], ["created_at", "2020-03-21 22:38:50.483642"], ["updated_at", "2020-03-21 22:38:50.483642"], ["entry_created", "2020-03-21 22:38:50.482892"]]
+  ↳ db/seeds.rb:125
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:125
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:134
+  [1m[36mSpecial Create (0.5ms)[0m  [1m[32mINSERT INTO "specials" ("name", "input_direction", "attack_type", "damage_dealt", "preview", "created_at", "updated_at", "entry_created") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Bomb"], ["input_direction", "Down"], ["attack_type", "Projectile"], ["damage_dealt", "14% (base)"], ["preview", "/assets/toonlink_downb.gif"], ["created_at", "2020-03-21 22:38:50.486494"], ["updated_at", "2020-03-21 22:38:50.486494"], ["entry_created", "2020-03-21 22:38:50.485710"]]
+  ↳ db/seeds.rb:134
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:134
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:143
+  [1m[36mSpecial Update (0.4ms)[0m  [1m[33mUPDATE "specials" SET "fighter_id" = $1, "updated_at" = $2 WHERE "specials"."id" = $3[0m  [["fighter_id", 78], ["updated_at", "2020-03-21 22:38:50.489661"], ["id", 287]]
+  ↳ db/seeds.rb:143
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:143
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:143
+  [1m[36mSpecial Update (0.5ms)[0m  [1m[33mUPDATE "specials" SET "fighter_id" = $1, "updated_at" = $2 WHERE "specials"."id" = $3[0m  [["fighter_id", 78], ["updated_at", "2020-03-21 22:38:50.492447"], ["id", 288]]
+  ↳ db/seeds.rb:143
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:143
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:143
+  [1m[36mSpecial Update (0.5ms)[0m  [1m[33mUPDATE "specials" SET "fighter_id" = $1, "updated_at" = $2 WHERE "specials"."id" = $3[0m  [["fighter_id", 78], ["updated_at", "2020-03-21 22:38:50.495320"], ["id", 289]]
+  ↳ db/seeds.rb:143
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:143
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:143
+  [1m[36mSpecial Update (0.4ms)[0m  [1m[33mUPDATE "specials" SET "fighter_id" = $1, "updated_at" = $2 WHERE "specials"."id" = $3[0m  [["fighter_id", 78], ["updated_at", "2020-03-21 22:38:50.497937"], ["id", 290]]
+  ↳ db/seeds.rb:143
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:143
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:146
+  [1m[36mSpecial Create (0.4ms)[0m  [1m[32mINSERT INTO "specials" ("name", "input_direction", "attack_type", "damage_dealt", "preview", "created_at", "updated_at", "entry_created") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Shieldbreaker"], ["input_direction", "Neutral"], ["attack_type", "Melee"], ["damage_dealt", "8.5-23% (base)"], ["preview", "/assets/lucina_neutralb.gif"], ["created_at", "2020-03-21 22:38:50.500708"], ["updated_at", "2020-03-21 22:38:50.500708"], ["entry_created", "2020-03-21 22:38:50.499931"]]
+  ↳ db/seeds.rb:146
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:146
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:155
+  [1m[36mSpecial Create (0.5ms)[0m  [1m[32mINSERT INTO "specials" ("name", "input_direction", "attack_type", "damage_dealt", "preview", "created_at", "updated_at", "entry_created") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Dancing Blade"], ["input_direction", "Side"], ["attack_type", "Melee"], ["damage_dealt", "2-5.6% (base)"], ["preview", "/assets/lucina_sideb.gif"], ["created_at", "2020-03-21 22:38:50.503471"], ["updated_at", "2020-03-21 22:38:50.503471"], ["entry_created", "2020-03-21 22:38:50.502693"]]
+  ↳ db/seeds.rb:155
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:155
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:164
+  [1m[36mSpecial Create (0.4ms)[0m  [1m[32mINSERT INTO "specials" ("name", "input_direction", "attack_type", "damage_dealt", "preview", "created_at", "updated_at", "entry_created") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Dolphin Slash"], ["input_direction", "Up"], ["attack_type", "Melee/ Recovery"], ["damage_dealt", "7-11% (base)"], ["preview", "/assets/lucina_upb.gif"], ["created_at", "2020-03-21 22:38:50.506321"], ["updated_at", "2020-03-21 22:38:50.506321"], ["entry_created", "2020-03-21 22:38:50.505554"]]
+  ↳ db/seeds.rb:164
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:164
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:173
+  [1m[36mSpecial Create (0.3ms)[0m  [1m[32mINSERT INTO "specials" ("name", "input_direction", "attack_type", "damage_dealt", "preview", "created_at", "updated_at", "entry_created") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Counter"], ["input_direction", "Down"], ["attack_type", "Counter"], ["damage_dealt", "Varies"], ["preview", "/assets/lucina_downb.gif"], ["created_at", "2020-03-21 22:38:50.509106"], ["updated_at", "2020-03-21 22:38:50.509106"], ["entry_created", "2020-03-21 22:38:50.508312"]]
+  ↳ db/seeds.rb:173
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:173
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:182
+  [1m[36mSpecial Update (0.5ms)[0m  [1m[33mUPDATE "specials" SET "fighter_id" = $1, "updated_at" = $2 WHERE "specials"."id" = $3[0m  [["fighter_id", 79], ["updated_at", "2020-03-21 22:38:50.511989"], ["id", 291]]
+  ↳ db/seeds.rb:182
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:182
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:182
+  [1m[36mSpecial Update (0.4ms)[0m  [1m[33mUPDATE "specials" SET "fighter_id" = $1, "updated_at" = $2 WHERE "specials"."id" = $3[0m  [["fighter_id", 79], ["updated_at", "2020-03-21 22:38:50.514697"], ["id", 292]]
+  ↳ db/seeds.rb:182
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:182
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:182
+  [1m[36mSpecial Update (0.4ms)[0m  [1m[33mUPDATE "specials" SET "fighter_id" = $1, "updated_at" = $2 WHERE "specials"."id" = $3[0m  [["fighter_id", 79], ["updated_at", "2020-03-21 22:38:50.517551"], ["id", 293]]
+  ↳ db/seeds.rb:182
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:182
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:182
+  [1m[36mSpecial Update (0.4ms)[0m  [1m[33mUPDATE "specials" SET "fighter_id" = $1, "updated_at" = $2 WHERE "specials"."id" = $3[0m  [["fighter_id", 79], ["updated_at", "2020-03-21 22:38:50.520275"], ["id", 294]]
+  ↳ db/seeds.rb:182
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:182
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:185
+  [1m[36mSpecial Create (0.4ms)[0m  [1m[32mINSERT INTO "specials" ("name", "input_direction", "attack_type", "damage_dealt", "preview", "created_at", "updated_at", "entry_created") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Toad"], ["input_direction", "Neutral"], ["attack_type", "Counter"], ["damage_dealt", "Varies"], ["preview", "/assets/peach_neutralb.gif"], ["created_at", "2020-03-21 22:38:50.522968"], ["updated_at", "2020-03-21 22:38:50.522968"], ["entry_created", "2020-03-21 22:38:50.522186"]]
+  ↳ db/seeds.rb:185
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:185
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:194
+  [1m[36mSpecial Create (0.5ms)[0m  [1m[32mINSERT INTO "specials" ("name", "input_direction", "attack_type", "damage_dealt", "preview", "created_at", "updated_at", "entry_created") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Peach Bomber"], ["input_direction", "Side"], ["attack_type", "Melee"], ["damage_dealt", "12% (base)"], ["preview", "/assets/peach_sideb.gif"], ["created_at", "2020-03-21 22:38:50.525916"], ["updated_at", "2020-03-21 22:38:50.525916"], ["entry_created", "2020-03-21 22:38:50.525009"]]
+  ↳ db/seeds.rb:194
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:194
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:203
+  [1m[36mSpecial Create (0.4ms)[0m  [1m[32mINSERT INTO "specials" ("name", "input_direction", "attack_type", "damage_dealt", "preview", "created_at", "updated_at", "entry_created") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Peach Parasol"], ["input_direction", "Up"], ["attack_type", "Melee/ Recovery"], ["damage_dealt", "1-4% (base)"], ["preview", "/assets/peach_upb.gif"], ["created_at", "2020-03-21 22:38:50.528634"], ["updated_at", "2020-03-21 22:38:50.528634"], ["entry_created", "2020-03-21 22:38:50.527866"]]
+  ↳ db/seeds.rb:203
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:203
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:212
+  [1m[36mSpecial Create (0.4ms)[0m  [1m[32mINSERT INTO "specials" ("name", "input_direction", "attack_type", "damage_dealt", "preview", "created_at", "updated_at", "entry_created") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Vegetable"], ["input_direction", "Down"], ["attack_type", "Projectile"], ["damage_dealt", "Varies (based on Turnip type)"], ["preview", "/assets/peach_downb.gif"], ["created_at", "2020-03-21 22:38:50.531483"], ["updated_at", "2020-03-21 22:38:50.531483"], ["entry_created", "2020-03-21 22:38:50.530693"]]
+  ↳ db/seeds.rb:212
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:212
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:221
+  [1m[36mSpecial Update (0.5ms)[0m  [1m[33mUPDATE "specials" SET "fighter_id" = $1, "updated_at" = $2 WHERE "specials"."id" = $3[0m  [["fighter_id", 80], ["updated_at", "2020-03-21 22:38:50.534313"], ["id", 295]]
+  ↳ db/seeds.rb:221
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:221
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:221
+  [1m[36mSpecial Update (0.4ms)[0m  [1m[33mUPDATE "specials" SET "fighter_id" = $1, "updated_at" = $2 WHERE "specials"."id" = $3[0m  [["fighter_id", 80], ["updated_at", "2020-03-21 22:38:50.537100"], ["id", 296]]
+  ↳ db/seeds.rb:221
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:221
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:221
+  [1m[36mSpecial Update (0.5ms)[0m  [1m[33mUPDATE "specials" SET "fighter_id" = $1, "updated_at" = $2 WHERE "specials"."id" = $3[0m  [["fighter_id", 80], ["updated_at", "2020-03-21 22:38:50.539815"], ["id", 297]]
+  ↳ db/seeds.rb:221
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:221
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:221
+  [1m[36mSpecial Update (0.4ms)[0m  [1m[33mUPDATE "specials" SET "fighter_id" = $1, "updated_at" = $2 WHERE "specials"."id" = $3[0m  [["fighter_id", 80], ["updated_at", "2020-03-21 22:38:50.542690"], ["id", 298]]
+  ↳ db/seeds.rb:221
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:221
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:224
+  [1m[36mSpecial Create (0.8ms)[0m  [1m[32mINSERT INTO "specials" ("name", "input_direction", "attack_type", "damage_dealt", "preview", "created_at", "updated_at", "entry_created") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Thunder Jolt"], ["input_direction", "Neutral"], ["attack_type", "Projectile"], ["damage_dealt", "5% (base)"], ["preview", "/assets/pikachu_neutralb.gif"], ["created_at", "2020-03-21 22:38:50.545408"], ["updated_at", "2020-03-21 22:38:50.545408"], ["entry_created", "2020-03-21 22:38:50.544561"]]
+  ↳ db/seeds.rb:224
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:224
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:233
+  [1m[36mSpecial Create (0.7ms)[0m  [1m[32mINSERT INTO "specials" ("name", "input_direction", "attack_type", "damage_dealt", "preview", "created_at", "updated_at", "entry_created") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Skull Bash"], ["input_direction", "Side"], ["attack_type", "Melee/ Recovery"], ["damage_dealt", "8% (base)"], ["preview", "/assets/pikachu_sideb.gif"], ["created_at", "2020-03-21 22:38:50.549842"], ["updated_at", "2020-03-21 22:38:50.549842"], ["entry_created", "2020-03-21 22:38:50.548476"]]
+  ↳ db/seeds.rb:233
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:233
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:242
+  [1m[36mSpecial Create (0.6ms)[0m  [1m[32mINSERT INTO "specials" ("name", "input_direction", "attack_type", "damage_dealt", "preview", "created_at", "updated_at", "entry_created") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Quick Attack"], ["input_direction", "Up"], ["attack_type", "Melee/ Recovery"], ["damage_dealt", "2% (base)"], ["preview", "/assets/pikachu_upb.gif"], ["created_at", "2020-03-21 22:38:50.553258"], ["updated_at", "2020-03-21 22:38:50.553258"], ["entry_created", "2020-03-21 22:38:50.552416"]]
+  ↳ db/seeds.rb:242
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:242
+  [1m[35m (4.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:251
+  [1m[36mSpecial Create (0.5ms)[0m  [1m[32mINSERT INTO "specials" ("name", "input_direction", "attack_type", "damage_dealt", "preview", "created_at", "updated_at", "entry_created") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Thunder"], ["input_direction", "Down"], ["attack_type", "Projectile/ Melee"], ["damage_dealt", "12% (base)"], ["preview", "/assets/pikachu_downb.gif"], ["created_at", "2020-03-21 22:38:50.560740"], ["updated_at", "2020-03-21 22:38:50.560740"], ["entry_created", "2020-03-21 22:38:50.555870"]]
+  ↳ db/seeds.rb:251
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:251
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:260
+  [1m[36mSpecial Update (0.6ms)[0m  [1m[33mUPDATE "specials" SET "fighter_id" = $1, "updated_at" = $2 WHERE "specials"."id" = $3[0m  [["fighter_id", 81], ["updated_at", "2020-03-21 22:38:50.564055"], ["id", 299]]
+  ↳ db/seeds.rb:260
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:260
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:260
+  [1m[36mSpecial Update (0.5ms)[0m  [1m[33mUPDATE "specials" SET "fighter_id" = $1, "updated_at" = $2 WHERE "specials"."id" = $3[0m  [["fighter_id", 81], ["updated_at", "2020-03-21 22:38:50.567091"], ["id", 300]]
+  ↳ db/seeds.rb:260
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:260
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:260
+  [1m[36mSpecial Update (0.5ms)[0m  [1m[33mUPDATE "specials" SET "fighter_id" = $1, "updated_at" = $2 WHERE "specials"."id" = $3[0m  [["fighter_id", 81], ["updated_at", "2020-03-21 22:38:50.569953"], ["id", 301]]
+  ↳ db/seeds.rb:260
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:260
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:260
+  [1m[36mSpecial Update (0.5ms)[0m  [1m[33mUPDATE "specials" SET "fighter_id" = $1, "updated_at" = $2 WHERE "specials"."id" = $3[0m  [["fighter_id", 81], ["updated_at", "2020-03-21 22:38:50.572594"], ["id", 302]]
+  ↳ db/seeds.rb:260
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:260
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "specials"[0m
+  ↳ db/seeds.rb:262
+  [1m[36mGame Load (0.6ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  ↳ db/seeds.rb:265
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:265
+  [1m[36mGame::HABTM_Fighters Destroy (0.5ms)[0m  [1m[31mDELETE FROM "fighters_games" WHERE "fighters_games"."game_id" = $1[0m  [["game_id", 66]]
+  ↳ db/seeds.rb:265
+  [1m[36mGame Destroy (0.4ms)[0m  [1m[31mDELETE FROM "games" WHERE "games"."id" = $1[0m  [["id", 66]]
+  ↳ db/seeds.rb:265
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:265
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:265
+  [1m[36mGame::HABTM_Fighters Destroy (0.3ms)[0m  [1m[31mDELETE FROM "fighters_games" WHERE "fighters_games"."game_id" = $1[0m  [["game_id", 67]]
+  ↳ db/seeds.rb:265
+  [1m[36mGame Destroy (0.4ms)[0m  [1m[31mDELETE FROM "games" WHERE "games"."id" = $1[0m  [["id", 67]]
+  ↳ db/seeds.rb:265
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:265
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:265
+  [1m[36mGame::HABTM_Fighters Destroy (0.4ms)[0m  [1m[31mDELETE FROM "fighters_games" WHERE "fighters_games"."game_id" = $1[0m  [["game_id", 68]]
+  ↳ db/seeds.rb:265
+  [1m[36mGame Destroy (0.4ms)[0m  [1m[31mDELETE FROM "games" WHERE "games"."id" = $1[0m  [["id", 68]]
+  ↳ db/seeds.rb:265
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:265
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:265
+  [1m[36mGame::HABTM_Fighters Destroy (0.4ms)[0m  [1m[31mDELETE FROM "fighters_games" WHERE "fighters_games"."game_id" = $1[0m  [["game_id", 69]]
+  ↳ db/seeds.rb:265
+  [1m[36mGame Destroy (0.4ms)[0m  [1m[31mDELETE FROM "games" WHERE "games"."id" = $1[0m  [["id", 69]]
+  ↳ db/seeds.rb:265
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:265
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:265
+  [1m[36mGame::HABTM_Fighters Destroy (0.4ms)[0m  [1m[31mDELETE FROM "fighters_games" WHERE "fighters_games"."game_id" = $1[0m  [["game_id", 70]]
+  ↳ db/seeds.rb:265
+  [1m[36mGame Destroy (0.4ms)[0m  [1m[31mDELETE FROM "games" WHERE "games"."id" = $1[0m  [["id", 70]]
+  ↳ db/seeds.rb:265
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:265
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:267
+  [1m[36mGame Create (2.0ms)[0m  [1m[32mINSERT INTO "games" ("name", "release_date", "patch_version", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Smash 64"], ["release_date", "1999-01-21"], ["patch_version", "N/A"], ["image", "/assets/smash64_logo.jpg"], ["created_at", "2020-03-21 22:38:50.605310"], ["updated_at", "2020-03-21 22:38:50.605310"]]
+  ↳ db/seeds.rb:267
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:267
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:274
+  [1m[36mGame Create (1.0ms)[0m  [1m[32mINSERT INTO "games" ("name", "release_date", "patch_version", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Melee"], ["release_date", "2001-11-21"], ["patch_version", "N/A"], ["image", "/assets/melee_logo.jpg"], ["created_at", "2020-03-21 22:38:50.611627"], ["updated_at", "2020-03-21 22:38:50.611627"]]
+  ↳ db/seeds.rb:274
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:274
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:281
+  [1m[36mGame Create (0.7ms)[0m  [1m[32mINSERT INTO "games" ("name", "release_date", "patch_version", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Brawl"], ["release_date", "2008-01-31"], ["patch_version", "N/A"], ["image", "/assets/brawl_logo.png"], ["created_at", "2020-03-21 22:38:50.615568"], ["updated_at", "2020-03-21 22:38:50.615568"]]
+  ↳ db/seeds.rb:281
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:281
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:288
+  [1m[36mGame Create (0.4ms)[0m  [1m[32mINSERT INTO "games" ("name", "release_date", "patch_version", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Smash4"], ["release_date", "2014-09-13"], ["patch_version", "1.1.7"], ["image", "/assets/wiiu_logo.png"], ["created_at", "2020-03-21 22:38:50.618806"], ["updated_at", "2020-03-21 22:38:50.618806"]]
+  ↳ db/seeds.rb:288
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:288
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:295
+  [1m[36mGame Create (0.4ms)[0m  [1m[32mINSERT INTO "games" ("name", "release_date", "patch_version", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Ultimate"], ["release_date", "2018-12-07"], ["patch_version", "7.0.0"], ["image", "/assets/ultimate_logo.png"], ["created_at", "2020-03-21 22:38:50.621971"], ["updated_at", "2020-03-21 22:38:50.621971"]]
+  ↳ db/seeds.rb:295
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:295
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:302
+  [1m[36mFighter::HABTM_Games Create (2.2ms)[0m  [1m[32mINSERT INTO "fighters_games" ("fighter_id", "game_id") VALUES ($1, $2) RETURNING "id"[0m  [["fighter_id", 77], ["game_id", 73]]
+  ↳ db/seeds.rb:302
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:302
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:302
+  [1m[36mFighter::HABTM_Games Create (0.4ms)[0m  [1m[32mINSERT INTO "fighters_games" ("fighter_id", "game_id") VALUES ($1, $2) RETURNING "id"[0m  [["fighter_id", 77], ["game_id", 75]]
+  ↳ db/seeds.rb:302
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:302
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:303
+  [1m[36mFighter::HABTM_Games Create (0.5ms)[0m  [1m[32mINSERT INTO "fighters_games" ("fighter_id", "game_id") VALUES ($1, $2) RETURNING "id"[0m  [["fighter_id", 78], ["game_id", 73]]
+  ↳ db/seeds.rb:303
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:303
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:303
+  [1m[36mFighter::HABTM_Games Create (0.6ms)[0m  [1m[32mINSERT INTO "fighters_games" ("fighter_id", "game_id") VALUES ($1, $2) RETURNING "id"[0m  [["fighter_id", 78], ["game_id", 74]]
+  ↳ db/seeds.rb:303
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:303
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:303
+  [1m[36mFighter::HABTM_Games Create (0.4ms)[0m  [1m[32mINSERT INTO "fighters_games" ("fighter_id", "game_id") VALUES ($1, $2) RETURNING "id"[0m  [["fighter_id", 78], ["game_id", 75]]
+  ↳ db/seeds.rb:303
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:303
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:304
+  [1m[36mFighter::HABTM_Games Create (0.6ms)[0m  [1m[32mINSERT INTO "fighters_games" ("fighter_id", "game_id") VALUES ($1, $2) RETURNING "id"[0m  [["fighter_id", 79], ["game_id", 74]]
+  ↳ db/seeds.rb:304
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:304
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:304
+  [1m[36mFighter::HABTM_Games Create (0.5ms)[0m  [1m[32mINSERT INTO "fighters_games" ("fighter_id", "game_id") VALUES ($1, $2) RETURNING "id"[0m  [["fighter_id", 79], ["game_id", 75]]
+  ↳ db/seeds.rb:304
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:304
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:305
+  [1m[36mFighter::HABTM_Games Create (0.4ms)[0m  [1m[32mINSERT INTO "fighters_games" ("fighter_id", "game_id") VALUES ($1, $2) RETURNING "id"[0m  [["fighter_id", 80], ["game_id", 72]]
+  ↳ db/seeds.rb:305
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:305
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:305
+  [1m[36mFighter::HABTM_Games Create (0.4ms)[0m  [1m[32mINSERT INTO "fighters_games" ("fighter_id", "game_id") VALUES ($1, $2) RETURNING "id"[0m  [["fighter_id", 80], ["game_id", 73]]
+  ↳ db/seeds.rb:305
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:305
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:305
+  [1m[36mFighter::HABTM_Games Create (0.5ms)[0m  [1m[32mINSERT INTO "fighters_games" ("fighter_id", "game_id") VALUES ($1, $2) RETURNING "id"[0m  [["fighter_id", 80], ["game_id", 74]]
+  ↳ db/seeds.rb:305
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:305
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:305
+  [1m[36mFighter::HABTM_Games Create (0.5ms)[0m  [1m[32mINSERT INTO "fighters_games" ("fighter_id", "game_id") VALUES ($1, $2) RETURNING "id"[0m  [["fighter_id", 80], ["game_id", 75]]
+  ↳ db/seeds.rb:305
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:305
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:306
+  [1m[36mFighter::HABTM_Games Create (0.5ms)[0m  [1m[32mINSERT INTO "fighters_games" ("fighter_id", "game_id") VALUES ($1, $2) RETURNING "id"[0m  [["fighter_id", 81], ["game_id", 71]]
+  ↳ db/seeds.rb:306
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:306
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:306
+  [1m[36mFighter::HABTM_Games Create (0.5ms)[0m  [1m[32mINSERT INTO "fighters_games" ("fighter_id", "game_id") VALUES ($1, $2) RETURNING "id"[0m  [["fighter_id", 81], ["game_id", 72]]
+  ↳ db/seeds.rb:306
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:306
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:306
+  [1m[36mFighter::HABTM_Games Create (0.5ms)[0m  [1m[32mINSERT INTO "fighters_games" ("fighter_id", "game_id") VALUES ($1, $2) RETURNING "id"[0m  [["fighter_id", 81], ["game_id", 73]]
+  ↳ db/seeds.rb:306
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:306
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:306
+  [1m[36mFighter::HABTM_Games Create (0.5ms)[0m  [1m[32mINSERT INTO "fighters_games" ("fighter_id", "game_id") VALUES ($1, $2) RETURNING "id"[0m  [["fighter_id", 81], ["game_id", 74]]
+  ↳ db/seeds.rb:306
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:306
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:306
+  [1m[36mFighter::HABTM_Games Create (0.4ms)[0m  [1m[32mINSERT INTO "fighters_games" ("fighter_id", "game_id") VALUES ($1, $2) RETURNING "id"[0m  [["fighter_id", 81], ["game_id", 75]]
+  ↳ db/seeds.rb:306
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:306
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "games"[0m
+  ↳ db/seeds.rb:309
+Started GET "/" for ::1 at 2020-03-21 22:38:52 +1100
+Processing by PagesController#index as HTML
+  [1m[36mFighter Load (5.5ms)[0m  [1m[34mSELECT  "fighters".* FROM "fighters" ORDER BY entry_created DESC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:3
+  [1m[36mSpecial Load (3.8ms)[0m  [1m[34mSELECT  "specials".* FROM "specials" ORDER BY entry_created DESC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:4
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 38ms (Views: 21.6ms | ActiveRecord: 9.3ms)
+
+
+Started GET "/fighters/81" for ::1 at 2020-03-21 22:38:55 +1100
+Processing by FightersController#show as HTML
+  Parameters: {"id"=>"81"}
+  [1m[36mFighter Load (1.8ms)[0m  [1m[34mSELECT  "fighters".* FROM "fighters" WHERE "fighters"."id" = $1 LIMIT $2[0m  [["id", 81], ["LIMIT", 1]]
+  ↳ app/controllers/fighters_controller.rb:30
+  Rendering fighters/show.html.erb within layouts/application
+  [1m[36mGame Load (3.7ms)[0m  [1m[34mSELECT "games".* FROM "games" INNER JOIN "fighters_games" ON "games"."id" = "fighters_games"."game_id" WHERE "fighters_games"."fighter_id" = $1[0m  [["fighter_id", 81]]
+  ↳ app/views/fighters/show.html.erb:12
+  [1m[36mSpecial Load (0.6ms)[0m  [1m[34mSELECT "specials".* FROM "specials" WHERE "specials"."fighter_id" = $1[0m  [["fighter_id", 81]]
+  ↳ app/views/fighters/show.html.erb:18
+  Rendered fighters/show.html.erb within layouts/application (21.9ms)
+Completed 200 OK in 51ms (Views: 36.9ms | ActiveRecord: 6.7ms)
+
+
+Started GET "/fighters/81" for ::1 at 2020-03-21 22:39:45 +1100
+Processing by FightersController#show as HTML
+  Parameters: {"id"=>"81"}
+  [1m[36mFighter Load (1.3ms)[0m  [1m[34mSELECT  "fighters".* FROM "fighters" WHERE "fighters"."id" = $1 LIMIT $2[0m  [["id", 81], ["LIMIT", 1]]
+  ↳ app/controllers/fighters_controller.rb:30
+  Rendering fighters/show.html.erb within layouts/application
+  [1m[36mGame Load (1.5ms)[0m  [1m[34mSELECT "games".* FROM "games" INNER JOIN "fighters_games" ON "games"."id" = "fighters_games"."game_id" WHERE "fighters_games"."fighter_id" = $1[0m  [["fighter_id", 81]]
+  ↳ app/views/fighters/show.html.erb:12
+  [1m[36mSpecial Load (1.2ms)[0m  [1m[34mSELECT "specials".* FROM "specials" WHERE "specials"."fighter_id" = $1[0m  [["fighter_id", 81]]
+  ↳ app/views/fighters/show.html.erb:18
+  Rendered fighters/show.html.erb within layouts/application (9.8ms)
+Completed 200 OK in 26ms (Views: 19.3ms | ActiveRecord: 4.1ms)
+
+
+Started GET "/" for ::1 at 2020-03-21 22:39:51 +1100
+Processing by PagesController#index as HTML
+  [1m[36mFighter Load (1.1ms)[0m  [1m[34mSELECT  "fighters".* FROM "fighters" ORDER BY entry_created DESC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:3
+  [1m[36mSpecial Load (0.7ms)[0m  [1m[34mSELECT  "specials".* FROM "specials" ORDER BY entry_created DESC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:4
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 24ms (Views: 19.1ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/login" for ::1 at 2020-03-21 22:39:59 +1100
+Processing by SessionController#new as HTML
+  Rendering session/new.html.erb within layouts/application
+  Rendered session/new.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 33ms (Views: 29.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for ::1 at 2020-03-21 22:40:09 +1100
+Processing by SessionController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"491ETZkCtS6tqVxDnYo18H5wrHfJ8No/3nFExvInONw1qlef8HrTYtWPZEuMMbvNhtisfOeap65bbniuMnQEWg==", "email"=>"lcarreon@ga.co", "password"=>"[FILTERED]", "commit"=>"Log in"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "lcarreon@ga.co"], ["LIMIT", 1]]
+  ↳ app/controllers/session_controller.rb:6
+Redirected to http://localhost:3000/
+Completed 302 Found in 221ms (ActiveRecord: 4.9ms)
+
+
+Started GET "/" for ::1 at 2020-03-21 22:40:09 +1100
+Processing by PagesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+  [1m[36mFighter Load (0.3ms)[0m  [1m[34mSELECT  "fighters".* FROM "fighters" ORDER BY entry_created DESC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:3
+  [1m[36mSpecial Load (0.3ms)[0m  [1m[34mSELECT  "specials".* FROM "specials" ORDER BY entry_created DESC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:4
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 20ms (Views: 16.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/fighters/new" for ::1 at 2020-03-21 22:40:11 +1100
+Processing by FightersController#new as HTML
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+  Rendering fighters/new.html.erb within layouts/application
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "games"."name", "games"."id" FROM "games"[0m
+  ↳ app/views/fighters/_form.html.erb:15
+  Rendered fighters/_form.html.erb (17.3ms)
+  Rendered fighters/new.html.erb within layouts/application (20.1ms)
+Completed 200 OK in 46ms (Views: 34.7ms | ActiveRecord: 6.2ms)
+
+
+Started POST "/fighters" for ::1 at 2020-03-21 22:40:26 +1100
+Processing by FightersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BM6E4b2aFFEaVNqw8vksAzPGr0DFt33/msELvWWXYgTSuZcz1OJyHWJy4rjjQqI+y26vS+vdAG4f3jfVpcRegg==", "fighter"=>{"name"=>"Cloud", "franchise"=>"Final Fantasy", "stock_symbol"=>"", "availability"=>"Unlockable", "image"=>"", "final_smash"=>"", "game_ids"=>"74"}, "commit"=>"Create Fighter"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+  [1m[36mGame Load (0.6ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."id" = $1[0m  [["id", 74]]
+  ↳ app/controllers/fighters_controller.rb:13
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/fighters_controller.rb:13
+  [1m[36mFighter Create (0.7ms)[0m  [1m[32mINSERT INTO "fighters" ("name", "stock_symbol", "availability", "image", "final_smash", "created_at", "updated_at", "franchise") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Cloud"], ["stock_symbol", ""], ["availability", "Unlockable"], ["image", ""], ["final_smash", ""], ["created_at", "2020-03-21 22:40:26.550268"], ["updated_at", "2020-03-21 22:40:26.550268"], ["franchise", "Final Fantasy"]]
+  ↳ app/controllers/fighters_controller.rb:13
+  [1m[36mFighter::HABTM_Games Create (0.4ms)[0m  [1m[32mINSERT INTO "fighters_games" ("fighter_id", "game_id") VALUES ($1, $2) RETURNING "id"[0m  [["fighter_id", 82], ["game_id", 74]]
+  ↳ app/controllers/fighters_controller.rb:13
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/fighters_controller.rb:13
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/fighters_controller.rb:15
+  [1m[36mFighter Update (0.7ms)[0m  [1m[33mUPDATE "fighters" SET "updated_at" = $1, "entry_created" = $2 WHERE "fighters"."id" = $3[0m  [["updated_at", "2020-03-21 22:40:26.555092"], ["entry_created", "2020-03-21 22:40:26.554194"], ["id", 82]]
+  ↳ app/controllers/fighters_controller.rb:15
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/fighters_controller.rb:15
+Redirected to http://localhost:3000/fighters/82
+Completed 302 Found in 30ms (ActiveRecord: 16.6ms)
+
+
+Started GET "/fighters/82" for ::1 at 2020-03-21 22:40:26 +1100
+Processing by FightersController#show as HTML
+  Parameters: {"id"=>"82"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+  [1m[36mFighter Load (0.2ms)[0m  [1m[34mSELECT  "fighters".* FROM "fighters" WHERE "fighters"."id" = $1 LIMIT $2[0m  [["id", 82], ["LIMIT", 1]]
+  ↳ app/controllers/fighters_controller.rb:30
+  Rendering fighters/show.html.erb within layouts/application
+  [1m[36mGame Load (0.7ms)[0m  [1m[34mSELECT "games".* FROM "games" INNER JOIN "fighters_games" ON "games"."id" = "fighters_games"."game_id" WHERE "fighters_games"."fighter_id" = $1[0m  [["fighter_id", 82]]
+  ↳ app/views/fighters/show.html.erb:12
+  [1m[36mSpecial Load (0.5ms)[0m  [1m[34mSELECT "specials".* FROM "specials" WHERE "specials"."fighter_id" = $1[0m  [["fighter_id", 82]]
+  ↳ app/views/fighters/show.html.erb:18
+  Rendered fighters/show.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 21ms (Views: 16.7ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/" for ::1 at 2020-03-21 22:40:32 +1100
+Processing by PagesController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+  [1m[36mFighter Load (0.7ms)[0m  [1m[34mSELECT  "fighters".* FROM "fighters" ORDER BY entry_created DESC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:3
+  [1m[36mSpecial Load (0.9ms)[0m  [1m[34mSELECT  "specials".* FROM "specials" ORDER BY entry_created DESC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:4
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 24ms (Views: 16.7ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/" for ::1 at 2020-03-21 22:40:36 +1100
+Processing by PagesController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+  [1m[36mFighter Load (0.7ms)[0m  [1m[34mSELECT  "fighters".* FROM "fighters" ORDER BY entry_created DESC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:3
+  [1m[36mSpecial Load (0.6ms)[0m  [1m[34mSELECT  "specials".* FROM "specials" ORDER BY entry_created DESC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:4
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 33ms (Views: 25.8ms | ActiveRecord: 1.9ms)
+
+

@@ -11,7 +11,7 @@ class SpecialsController < ApplicationController
 
   def create
     special = Special.create special_params
-    special.entry_created = DateTime.now.strftime("%Y/%m/%d %H:%M:%S")
+    special.entry_created = Time.zone.now
     special.save
     redirect_to special
   end

@@ -28,7 +28,7 @@
         </ul>
     </div>
     <div class="div_break"></div>
-    <strong>Article added on:</strong> <%= @fighter.entry_created.strftime("%A, %Y/%m/%d %l:%M %p") %>
+    <strong>Article added on:</strong> <%= @fighter.entry_created.strftime("%A, %Y/%m/%d %l:%M %p %Z") %>
 </div>
 <div class="controls">
     <% if @current_user.present? %>

@@ -11,7 +11,7 @@ class FightersController < ApplicationController
 
   def create
     fighter = Fighter.create fighter_params
-    fighter.entry_created = DateTime.now.strftime("%Y/%m/%d %H:%M:%S")
+    fighter.entry_created = Time.zone.now
     fighter.save
     redirect_to fighter
   end
