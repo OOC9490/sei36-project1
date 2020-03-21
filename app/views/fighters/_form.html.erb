@@ -9,6 +9,8 @@
     <%= f.text_field :availability %>
     <%= f.label :image %>
     <%= f.url_field :image, :placeholder => "Provide a link to your image..."  %>
+    <%= f.label :final_smash %>
+    <%= f.url_field :final_smash, :placeholder => "Provide a link to your image..."  %>
     <%= f.label :game_id %>
     <%= f.select :game_ids, Game.pluck(:name, :id), :include_blank => true %>
 

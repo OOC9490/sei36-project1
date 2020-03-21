@@ -11,7 +11,7 @@ class SpecialsController < ApplicationController
 
   def create
     special = Special.create special_params
-    special.entry_created = DateTime.now.strftime("%Y/%m/%d %H:%M:%S")
+    special.entry_created = DateTime.now.strftime("%Y/%m/%d %H:%M")
     special.save
     redirect_to special
   end
@@ -38,6 +38,6 @@ class SpecialsController < ApplicationController
 
   private
   def special_params
-    params.require(:special).permit :name, :input_direction, :attack_type, :damage_dealt, :preview, :fighter_id
+    params.require(:special).permit :name, :input_direction, :attack_type, :damage_dealt, :preview, :fighter_id, :entry_created
   end
 end

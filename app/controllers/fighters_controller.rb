@@ -11,7 +11,7 @@ class FightersController < ApplicationController
 
   def create
     fighter = Fighter.create fighter_params
-    fighter.entry_created = DateTime.now.strftime("%Y/%m/%d %H:%M:%S")
+    fighter.entry_created = DateTime.now.strftime("%Y/%m/%d %H:%M")
     fighter.save
     redirect_to fighter
   end
@@ -38,6 +38,6 @@ class FightersController < ApplicationController
 
   private
   def fighter_params
-    params.require(:fighter).permit :name, :stock_symbol, :availability, :image
+    params.require(:fighter).permit :name, :stock_symbol, :availability, :image, :final_smash, :franchise, :game_ids, :entry_created
   end
 end

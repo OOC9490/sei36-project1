@@ -14,13 +14,13 @@
                 <% end %>
             </li>
             <li><strong>Special Moves:</strong><br>
-                <ul>
+                <ol>
                 <% @fighter.specials.each do |special| %>
                     <li>
                         <%= link_to special.name, special if special.name.present? %>
                     </li>
                 <% end %>
-                </ul>
+                </ol>
             </li>
             <li><strong>Final Smash:</strong><br>
                 <%= image_tag @fighter.final_smash, :class => "profile_smash" if @fighter.final_smash.present? %>
@@ -28,7 +28,7 @@
         </ul>
     </div>
     <div class="div_break"></div>
-    <strong>Article added on:</strong> <%= @special.entry_created.strftime("%A, %Y/%m/%d %H:%M") %>
+    <strong>Article added on:</strong> <%= @fighter.entry_created.strftime("%A, %Y/%m/%d %H:%M") %>
 </div>
 <div class="controls">
     <% if @current_user.present? %>

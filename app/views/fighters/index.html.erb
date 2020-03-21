@@ -3,11 +3,13 @@
 <div class="character_index">
     <% @fighters.each do |fighter| %>
         <%= link_to(fighter, :class => "char_index" ) do %>
-            <%= image_tag(fighter.stock_symbol, :class => "thumb") %>
-            <div class="char_hover">
-                Final Smash Preview:
-                <%= image_tag fighter.final_smash, :class => "index_preview" %>
-            </div>
+            <%= image_tag(fighter.stock_symbol, :class => "thumb", :alt => fighter.name) %>
+            <%  if fighter.final_smash.present? %>
+                <div class="char_hover">
+                    Final Smash Preview:
+                    <%= image_tag fighter.final_smash, :class => "index_preview" %>
+                </div>
+            <% end %>
         <% end %>
     <% end %>
 </div>
