@@ -4,7 +4,7 @@
         <% end %>
         <%= @special.name %>
     </h2>
-    <hr>
+    <div class="div_break"></div>
     <div class="inner_profile special_moves">
         <ul>
             <li><strong>Input Direction:</strong> <%= @special.input_direction %></li>
@@ -14,6 +14,8 @@
 
         <%= image_tag @special.preview, :class => "feature", :alt => @special.name if @special.preview.present? %>
     </div>
+    <div class="div_break"></div>
+    <strong>Article added on:</strong> <%= @special.entry_created.strftime("%A, %Y/%m/%d %H:%M") %>
 </div>
 
 <div class="controls">

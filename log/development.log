@@ -18833,3 +18833,138 @@ Processing by PagesController#index as HTML
 Completed 200 OK in 111ms (Views: 95.9ms | ActiveRecord: 6.2ms)
 
 
+  [1m[36mSpecial Load (1.1ms)[0m  [1m[34mSELECT "specials".* FROM "specials"[0m
+Started GET "/" for ::1 at 2020-03-21 16:05:30 +1100
+Processing by PagesController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 30], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+  [1m[36mFighter Load (1.2ms)[0m  [1m[34mSELECT  "fighters".* FROM "fighters" ORDER BY entry_created DESC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:3
+  [1m[36mSpecial Load (2.4ms)[0m  [1m[34mSELECT  "specials".* FROM "specials" ORDER BY entry_created DESC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:4
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 74ms (Views: 49.0ms | ActiveRecord: 4.6ms)
+
+
+Started GET "/specials/242" for ::1 at 2020-03-21 16:05:34 +1100
+Processing by SpecialsController#show as HTML
+  Parameters: {"id"=>"242"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 30], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+  [1m[36mSpecial Load (0.5ms)[0m  [1m[34mSELECT  "specials".* FROM "specials" WHERE "specials"."id" = $1 LIMIT $2[0m  [["id", 242], ["LIMIT", 1]]
+  ↳ app/controllers/specials_controller.rb:30
+  Rendering specials/show.html.erb within layouts/application
+  Rendered specials/show.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 44ms (Views: 37.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/specials/242" for ::1 at 2020-03-21 16:06:23 +1100
+Processing by SpecialsController#show as HTML
+  Parameters: {"id"=>"242"}
+  [1m[36mUser Load (6.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 30], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+  [1m[36mSpecial Load (3.8ms)[0m  [1m[34mSELECT  "specials".* FROM "specials" WHERE "specials"."id" = $1 LIMIT $2[0m  [["id", 242], ["LIMIT", 1]]
+  ↳ app/controllers/specials_controller.rb:30
+  Rendering specials/show.html.erb within layouts/application
+  Rendered specials/show.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 48ms (Views: 26.2ms | ActiveRecord: 10.2ms)
+
+
+Started GET "/specials/242" for ::1 at 2020-03-21 16:06:57 +1100
+Processing by SpecialsController#show as HTML
+  Parameters: {"id"=>"242"}
+  [1m[36mUser Load (6.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 30], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+  [1m[36mSpecial Load (3.1ms)[0m  [1m[34mSELECT  "specials".* FROM "specials" WHERE "specials"."id" = $1 LIMIT $2[0m  [["id", 242], ["LIMIT", 1]]
+  ↳ app/controllers/specials_controller.rb:30
+  Rendering specials/show.html.erb within layouts/application
+  Rendered specials/show.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 49ms (Views: 25.8ms | ActiveRecord: 9.1ms)
+
+
+Started GET "/specials/242" for ::1 at 2020-03-21 16:07:22 +1100
+Processing by SpecialsController#show as HTML
+  Parameters: {"id"=>"242"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 30], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+  [1m[36mSpecial Load (0.7ms)[0m  [1m[34mSELECT  "specials".* FROM "specials" WHERE "specials"."id" = $1 LIMIT $2[0m  [["id", 242], ["LIMIT", 1]]
+  ↳ app/controllers/specials_controller.rb:30
+  Rendering specials/show.html.erb within layouts/application
+  Rendered specials/show.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 66ms (Views: 58.2ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/specials/242" for ::1 at 2020-03-21 16:07:38 +1100
+Processing by SpecialsController#show as HTML
+  Parameters: {"id"=>"242"}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 30], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+  [1m[36mSpecial Load (4.8ms)[0m  [1m[34mSELECT  "specials".* FROM "specials" WHERE "specials"."id" = $1 LIMIT $2[0m  [["id", 242], ["LIMIT", 1]]
+  ↳ app/controllers/specials_controller.rb:30
+  Rendering specials/show.html.erb within layouts/application
+  Rendered specials/show.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 50ms (Views: 30.0ms | ActiveRecord: 6.1ms)
+
+
+Started GET "/specials/242" for ::1 at 2020-03-21 16:07:58 +1100
+Processing by SpecialsController#show as HTML
+  Parameters: {"id"=>"242"}
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 30], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+  [1m[36mSpecial Load (0.9ms)[0m  [1m[34mSELECT  "specials".* FROM "specials" WHERE "specials"."id" = $1 LIMIT $2[0m  [["id", 242], ["LIMIT", 1]]
+  ↳ app/controllers/specials_controller.rb:30
+  Rendering specials/show.html.erb within layouts/application
+  Rendered specials/show.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 34ms (Views: 25.5ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/specials/242" for ::1 at 2020-03-21 16:08:47 +1100
+Processing by SpecialsController#show as HTML
+  Parameters: {"id"=>"242"}
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 30], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+  [1m[36mSpecial Load (0.8ms)[0m  [1m[34mSELECT  "specials".* FROM "specials" WHERE "specials"."id" = $1 LIMIT $2[0m  [["id", 242], ["LIMIT", 1]]
+  ↳ app/controllers/specials_controller.rb:30
+  Rendering specials/show.html.erb within layouts/application
+  Rendered specials/show.html.erb within layouts/application (9.8ms)
+Completed 200 OK in 51ms (Views: 41.2ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/specials/242" for ::1 at 2020-03-21 16:08:53 +1100
+Processing by SpecialsController#show as HTML
+  Parameters: {"id"=>"242"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 30], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+  [1m[36mSpecial Load (1.4ms)[0m  [1m[34mSELECT  "specials".* FROM "specials" WHERE "specials"."id" = $1 LIMIT $2[0m  [["id", 242], ["LIMIT", 1]]
+  ↳ app/controllers/specials_controller.rb:30
+  Rendering specials/show.html.erb within layouts/application
+  Rendered specials/show.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 45ms (Views: 34.4ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/specials/242" for ::1 at 2020-03-21 16:10:01 +1100
+Processing by SpecialsController#show as HTML
+  Parameters: {"id"=>"242"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 30], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+  [1m[36mSpecial Load (0.4ms)[0m  [1m[34mSELECT  "specials".* FROM "specials" WHERE "specials"."id" = $1 LIMIT $2[0m  [["id", 242], ["LIMIT", 1]]
+  ↳ app/controllers/specials_controller.rb:30
+  Rendering specials/show.html.erb within layouts/application
+  Rendered specials/show.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 157ms (Views: 151.5ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/" for ::1 at 2020-03-21 16:10:19 +1100
+Processing by PagesController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 30], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+  [1m[36mFighter Load (1.1ms)[0m  [1m[34mSELECT  "fighters".* FROM "fighters" ORDER BY entry_created DESC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:3
+  [1m[36mSpecial Load (1.4ms)[0m  [1m[34mSELECT  "specials".* FROM "specials" ORDER BY entry_created DESC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:4
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 54ms (Views: 38.4ms | ActiveRecord: 3.1ms)
+
+

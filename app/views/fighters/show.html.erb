@@ -27,6 +27,8 @@
             </li>
         </ul>
     </div>
+    <div class="div_break"></div>
+    <strong>Article added on:</strong> <%= @special.entry_created.strftime("%A, %Y/%m/%d %H:%M") %>
 </div>
 <div class="controls">
     <% if @current_user.present? %>
