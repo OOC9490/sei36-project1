@@ -6,6 +6,10 @@ This is my first project on rails, the project's basis is the beginnings of a Su
 
 I wanted to create a website that would promote the Smash community's involvement, be a good source of information and be an avenue to socialise on
 
+## The live website
+
+https://smash-wiki-lpc.herokuapp.com/
+
 ## Things I learned
 
 * Creating a website with CRUD system in using Ruby on Rails
