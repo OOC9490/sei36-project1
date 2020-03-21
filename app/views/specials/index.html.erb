@@ -6,7 +6,9 @@
         <h3><%= fighter.name %></h3>
         <div class="inner_container">
         <% @specials.each do |special| %>
-            <%= link_to image_tag(special.preview, :class => "special_select"), special if special.preview.present? && special.fighter.id == fighter.id %>  
+            <% if special.fighter.present? %>
+                <%= link_to image_tag(special.preview, :class => "special_select"), special if special.preview.present? && special.fighter.id == fighter.id %>
+            <% end %>  
         <% end %>
         </div>
     <% end %>
