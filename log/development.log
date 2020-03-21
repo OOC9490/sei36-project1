@@ -21445,3 +21445,116 @@ Processing by FightersController#show as HTML
 Completed 200 OK in 67ms (Views: 53.7ms | ActiveRecord: 4.3ms)
 
 
+Started GET "/fighters/76" for ::1 at 2020-03-21 17:09:58 +1100
+Processing by FightersController#show as HTML
+  Parameters: {"id"=>"76"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 38], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+  [1m[36mFighter Load (0.7ms)[0m  [1m[34mSELECT  "fighters".* FROM "fighters" WHERE "fighters"."id" = $1 LIMIT $2[0m  [["id", 76], ["LIMIT", 1]]
+  ↳ app/controllers/fighters_controller.rb:30
+  Rendering fighters/show.html.erb within layouts/application
+  [1m[36mGame Load (0.8ms)[0m  [1m[34mSELECT "games".* FROM "games" INNER JOIN "fighters_games" ON "games"."id" = "fighters_games"."game_id" WHERE "fighters_games"."fighter_id" = $1[0m  [["fighter_id", 76]]
+  ↳ app/views/fighters/show.html.erb:12
+  [1m[36mSpecial Load (0.5ms)[0m  [1m[34mSELECT "specials".* FROM "specials" WHERE "specials"."fighter_id" = $1[0m  [["fighter_id", 76]]
+  ↳ app/views/fighters/show.html.erb:18
+  Rendered fighters/show.html.erb within layouts/application (27.2ms)
+Completed 200 OK in 82ms (Views: 31.8ms | ActiveRecord: 26.9ms)
+
+
+Started GET "/" for ::1 at 2020-03-21 17:10:00 +1100
+Processing by PagesController#index as HTML
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 38], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+  [1m[36mFighter Load (1.3ms)[0m  [1m[34mSELECT  "fighters".* FROM "fighters" ORDER BY entry_created DESC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:3
+  [1m[36mSpecial Load (1.3ms)[0m  [1m[34mSELECT  "specials".* FROM "specials" ORDER BY entry_created DESC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:4
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 51ms (Views: 20.0ms | ActiveRecord: 11.3ms)
+
+
+Started GET "/fighters" for ::1 at 2020-03-21 17:10:02 +1100
+Processing by FightersController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 38], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+  Rendering fighters/index.html.erb within layouts/application
+  [1m[36mFighter Load (0.5ms)[0m  [1m[34mSELECT "fighters".* FROM "fighters"[0m
+  ↳ app/views/fighters/index.html.erb:4
+  Rendered fighters/index.html.erb within layouts/application (13.0ms)
+Completed 200 OK in 32ms (Views: 28.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/fighters/76" for ::1 at 2020-03-21 17:10:03 +1100
+Processing by FightersController#show as HTML
+  Parameters: {"id"=>"76"}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 38], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+  [1m[36mFighter Load (1.7ms)[0m  [1m[34mSELECT  "fighters".* FROM "fighters" WHERE "fighters"."id" = $1 LIMIT $2[0m  [["id", 76], ["LIMIT", 1]]
+  ↳ app/controllers/fighters_controller.rb:30
+  Rendering fighters/show.html.erb within layouts/application
+  [1m[36mGame Load (5.1ms)[0m  [1m[34mSELECT "games".* FROM "games" INNER JOIN "fighters_games" ON "games"."id" = "fighters_games"."game_id" WHERE "fighters_games"."fighter_id" = $1[0m  [["fighter_id", 76]]
+  ↳ app/views/fighters/show.html.erb:12
+  [1m[36mSpecial Load (0.8ms)[0m  [1m[34mSELECT "specials".* FROM "specials" WHERE "specials"."fighter_id" = $1[0m  [["fighter_id", 76]]
+  ↳ app/views/fighters/show.html.erb:18
+  Rendered fighters/show.html.erb within layouts/application (20.1ms)
+Completed 200 OK in 63ms (Views: 43.3ms | ActiveRecord: 9.8ms)
+
+
+Started DELETE "/fighters/76" for ::1 at 2020-03-21 17:10:14 +1100
+Processing by FightersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"WKnf8mQXMToxtnKx3YJd9ermORogNC65AN7Us6TMpqJNzKw26WYgAQ3xBexjU46dFwFwbObJUe4lQG2S3dieFw==", "id"=>"76"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 38], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+  [1m[36mFighter Load (0.3ms)[0m  [1m[34mSELECT  "fighters".* FROM "fighters" WHERE "fighters"."id" = $1 LIMIT $2[0m  [["id", 76], ["LIMIT", 1]]
+  ↳ app/controllers/fighters_controller.rb:34
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/fighters_controller.rb:35
+  [1m[36mFighter::HABTM_Games Destroy (0.5ms)[0m  [1m[31mDELETE FROM "fighters_games" WHERE "fighters_games"."fighter_id" = $1[0m  [["fighter_id", 76]]
+  ↳ app/controllers/fighters_controller.rb:35
+  [1m[36mFighter Destroy (1.0ms)[0m  [1m[31mDELETE FROM "fighters" WHERE "fighters"."id" = $1[0m  [["id", 76]]
+  ↳ app/controllers/fighters_controller.rb:35
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/fighters_controller.rb:35
+Redirected to http://localhost:3000/fighters
+Completed 302 Found in 19ms (ActiveRecord: 11.6ms)
+
+
+Started GET "/fighters" for ::1 at 2020-03-21 17:10:14 +1100
+Processing by FightersController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 38], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+  Rendering fighters/index.html.erb within layouts/application
+  [1m[36mFighter Load (0.4ms)[0m  [1m[34mSELECT "fighters".* FROM "fighters"[0m
+  ↳ app/views/fighters/index.html.erb:4
+  Rendered fighters/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 22ms (Views: 19.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/fighters" for ::1 at 2020-03-21 17:13:21 +1100
+Processing by FightersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 38], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+  Rendering fighters/index.html.erb within layouts/application
+  [1m[36mFighter Load (0.4ms)[0m  [1m[34mSELECT "fighters".* FROM "fighters"[0m
+  ↳ app/views/fighters/index.html.erb:4
+  Rendered fighters/index.html.erb within layouts/application (16.8ms)
+Completed 200 OK in 56ms (Views: 29.1ms | ActiveRecord: 12.5ms)
+
+
+Started GET "/fighters/71" for ::1 at 2020-03-21 17:13:22 +1100
+Processing by FightersController#show as HTML
+  Parameters: {"id"=>"71"}
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 38], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+  [1m[36mFighter Load (5.4ms)[0m  [1m[34mSELECT  "fighters".* FROM "fighters" WHERE "fighters"."id" = $1 LIMIT $2[0m  [["id", 71], ["LIMIT", 1]]
+  ↳ app/controllers/fighters_controller.rb:30
+  Rendering fighters/show.html.erb within layouts/application
+  [1m[36mGame Load (0.8ms)[0m  [1m[34mSELECT "games".* FROM "games" INNER JOIN "fighters_games" ON "games"."id" = "fighters_games"."game_id" WHERE "fighters_games"."fighter_id" = $1[0m  [["fighter_id", 71]]
+  ↳ app/views/fighters/show.html.erb:12
+  [1m[36mSpecial Load (0.5ms)[0m  [1m[34mSELECT "specials".* FROM "specials" WHERE "specials"."fighter_id" = $1[0m  [["fighter_id", 71]]
+  ↳ app/views/fighters/show.html.erb:18
+  Rendered fighters/show.html.erb within layouts/application (50.6ms)
+Completed 200 OK in 99ms (Views: 50.5ms | ActiveRecord: 27.0ms)
+
+

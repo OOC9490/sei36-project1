@@ -15,7 +15,7 @@
         <%= image_tag @special.preview, :class => "feature", :alt => @special.name if @special.preview.present? %>
     </div>
     <div class="div_break"></div>
-    <strong>Article added on:</strong> <%= @special.entry_created.strftime("%A, %Y/%m/%d %H:%M") %>
+    <strong>Article added on:</strong> <%= @special.entry_created.strftime("%A, %Y/%m/%d %l:%M %p") %>
 </div>
 
 <div class="controls">
