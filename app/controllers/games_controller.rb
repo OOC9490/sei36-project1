@@ -5,6 +5,6 @@ class GamesController < ApplicationController
 
   def show
     @game = Game.find params[:id]
-    @posts = @game.posts
+    @posts = @game.posts.sort
   end
 end

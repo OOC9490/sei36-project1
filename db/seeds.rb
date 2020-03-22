@@ -310,7 +310,72 @@ puts "#{Game.count} games were made!"
 
 Post.destroy_all
 
-p1 = 
+p1 = Post.create(
+    :content => "I'm so excited to try this character out!",
+    :date_posted => Time.now,
+    :article_type => "fighter"
+)
 
-puts "#{Post.count} games were made!"
+c1.posts << p1
+u1.posts << p1
+
+p2 = Post.create(
+    :content => "Low key the best character in the game?",
+    :date_posted => Time.now,
+    :article_type => "fighter",
+    :image => "https://i.imgflip.com/2gytch.jpg"
+)
+
+c5.posts << p2
+u2.posts << p2
+
+p3 = Post.create(
+    :content => "Ultimate is good but Melee will always have my heart.",
+    :date_posted => Time.now,
+    :article_type => "game"
+)
+
+p4 = Post.create(
+    :content => "^
+    Totally agree with you!",
+    :date_posted => Time.now,
+    :article_type => "game",
+    :image => "https://i.kym-cdn.com/photos/images/newsfeed/001/236/841/075.jpg"
+)
+
+g2.posts << p3
+u2.posts << p3
+g2.posts << p4
+u3.posts << p4
+
+p5 = Post.create(
+    :content => "Can anyone give me the link to the frame data for this attack?",
+    :date_posted => Time.now,
+    :article_type => "special"
+)
+
+p6 = Post.create(
+    :content => "^
+    Have a look here:
+    https://ultimateframedata.com/lucina.php
+    You're welcome",
+    :date_posted => Time.now,
+    :article_type => "special"
+)
+
+p7 = Post.create(
+    :content => "Thanks!",
+    :date_posted => Time.now,
+    :article_type => "special"
+)
+
+s10.posts << p5
+u1.posts << p5
+s10.posts << p6
+u2.posts << p6
+s10.posts << p7
+u1.posts << p7
+
+
+puts "#{Post.count} posts were made!"
 

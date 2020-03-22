@@ -7,7 +7,7 @@
         <div class="inner_container">
         <% if fighter.specials.present? %>
             <% fighter.specials.each do |special| %>
-                <%= link_to image_tag(special.preview, :class => "special_select", :alt => special.name), special %>
+                <%= link_to image_tag(special.preview, :class => "special_select", :alt => special.name, :title => special.name), special %>
             <% end %>
         <% else %>
             <p>There are currently so special moves associated with this fighter. Add and associate one by clicking <%= link_to "here", new_special_path, :class => "link_suggestion" %>.</p>

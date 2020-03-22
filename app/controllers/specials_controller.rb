@@ -28,7 +28,7 @@ class SpecialsController < ApplicationController
 
   def show
     @special = Special.find params[:id]
-    @posts = @special.posts
+    @posts = @special.posts.sort
   end
 
   def destroy

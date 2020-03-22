@@ -28,7 +28,7 @@ class FightersController < ApplicationController
 
   def show
     @fighter = Fighter.find params[:id]
-    @posts = @fighter.posts
+    @posts = @fighter.posts.sort
   end
 
   def destroy
