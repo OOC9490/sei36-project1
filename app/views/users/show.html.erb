@@ -1,0 +1,51 @@
+<div class="user_profile">
+    <div class="user_details">
+        <% if @user.nickname.present? %>
+            <h2><%= @user.nickname %>'s profile </h2>
+        <% else %>
+            <h2>Your profile</h2>
+        <% end %>
+
+        <h3>Your Current avatar:</h3>
+        <% if @user.profile_image.present? %>
+            <%= image_tag @user.profile_image, :alt => "#{@user.nickname}'s profile image", :class => "profile_image" %>
+        <% else %>
+            <%= image_tag "/assets/no_image", :alt => "no profile image provided", :class => "profile_image" %>
+        <% end %>
+        <ul>
+            <li><strong>Current nickname:</strong><p><%= @user.nickname.present? ? @user.nickname : "Not set" %></p></li>
+            <li><strong>Current e-mail:</strong><p><%= @user.email %></p></li>
+        </ul>
+
+        <%= button_to "Edit my profile", edit_user_path(@user), :method => "get", :class => "btn_hover" %>
+    </div>
+    <div class="post_details">
+        <% if @user.nickname.present? %>
+            <h2><%= @user.nickname %>'s posts </h2>
+        <% else %>
+            <h2>Your posts</h2>
+        <% end %>
+        <% @user.posts.each do |post| %>
+            <div class="post_content_section">
+                <p>Posted in
+                    <span class="link_suggestion">
+                        <% case post.article_type %>
+                        <% when "fighter" %>
+                            <%= link_to post.fighter.name, post.fighter %>
+                        <% when "special" %>
+                            <%= link_to post.special.name, post.special %>
+                        <% when "game" %>
+                            <%= link_to post.game.name, post.game %>
+                        <% end %> 
+                    </span>
+                </p>
+                <p><%= post.content %></p>
+                <%= image_tag post.image if post.image.present? %>
+                <p><em>Posted on: <%= post.date_posted.strftime("%A, %Y/%m/%d %l:%M %p") %></em></p>
+            </div>
+        <% end %>
+    </div>
+</div>
+
+
+

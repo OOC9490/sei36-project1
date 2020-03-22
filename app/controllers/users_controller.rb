@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_action :check_for_login, :only => [:edit, :update]
+  before_action :check_for_login, :only => [:edit, :update, :show]
   before_action :check_for_admin, :only => [:index, :destroy]
 
   def index
@@ -18,6 +18,7 @@ class UsersController < ApplicationController
     else
       render :new
     end
+
   end
 
   def edit
@@ -29,6 +30,10 @@ class UsersController < ApplicationController
     user.update user_profile_params
     flash[:notice] = "Your details have been updated!"
     redirect_to edit_user_path(user.id)
+  end
+
+  def show
+    @user = User.find params[:id]
   end
 
   def destroy

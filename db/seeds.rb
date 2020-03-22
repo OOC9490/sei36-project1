@@ -308,4 +308,9 @@ c5.games << g1 << g2 << g3 << g4 << g5
 
 puts "#{Game.count} games were made!"
 
+Post.destroy_all
+
+p1 = 
+
+puts "#{Post.count} games were made!"
 

@@ -1,0 +1,15 @@
+<h2>Editing your post in <%= @article_name %>'s article</h2>
+
+<%= form_for @post do |f| %>
+    <%= f.hidden_field :fighter_id, :value => @post.fighter_id %>
+    <%= f.hidden_field :user_id, :value => @post.user_id %>
+    <%= f.hidden_field :game_id, :value => @post.game_id %>
+    <%= f.hidden_field :special_id, :value => @post.special_id %>
+    <%= f.hidden_field :article_type, :value => @post.article_type %>
+    <%= f.label "Your post's text:" %>
+    <%= f.text_area :content, :placeholder => "text contents of your comment goes here", :autofocus => true, :required => true, :class => 'input_comment', :cols => 80, :rows => 5 %>
+    <%= f.label "Attached image:" %>
+    <%= f.text_field :image, :autofocus => true  %>
+  
+    <%= f.submit "Update my post" %>
+<% end %>

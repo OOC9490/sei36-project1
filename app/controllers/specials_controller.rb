@@ -28,6 +28,7 @@ class SpecialsController < ApplicationController
 
   def show
     @special = Special.find params[:id]
+    @posts = @special.posts
   end
 
   def destroy

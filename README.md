@@ -14,17 +14,16 @@ https://smash-wiki-lpc.herokuapp.com/
 
 * Creating a website with CRUD system in using Ruby on Rails
 * Managing and testing a deployment through Heroku
-* Uploading local files for use on live website
 
 ## Technology used
 
 * Rails version: 5.2.4.1
 * Ruby version: 2.7.0 
 * Heroku 7.39.0
-* Cloudinary
 
 ## For the future
 
+* Implement Cloudinary or another service that allows users to upload local files
 * Improved search engine implementation
-* A more robust infom
+* Make the information contained in the articles more robust 
 * Better linking between articles by using keywords to link to related articles

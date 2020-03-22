@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_03_21_055641) do
+ActiveRecord::Schema.define(version: 2020_03_22_065738) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -47,10 +47,11 @@ ActiveRecord::Schema.define(version: 2020_03_21_055641) do
     t.integer "game_id"
     t.integer "special_id"
     t.text "content"
-    t.integer "like_amount"
-    t.date "date_posted"
+    t.datetime "date_posted"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.text "image"
+    t.text "article_type"
   end
 
   create_table "specials", force: :cascade do |t|

@@ -11,3 +11,45 @@
         </li>
     </ul>
 </div>
+<br>
+<div class="dicussion">
+    <% if @current_user.present? %>
+        <%= form_for(Post.new, :html => {:multipart => true}) do |f| %>
+            <%= f.hidden_field :game_id, :value => @game.id %>
+            <%= f.hidden_field :user_id, :value => @current_user.id %>
+            <%= f.hidden_field :article_type, :value => "game" %>
+            <%= f.label "Join the discussion:" %>
+            <%= f.text_area :content, :placeholder => 'Compose your comment here...', :class => 'input_comment', :cols => 80, :rows => 5, :required => true %>
+            <br>
+            <%= f.label "Attach an image to your post:" %>
+            <%= f.url_field :image, :placeholder => "Provide a link to your image..."  %>
+
+            <%= f.submit "Submit post!" %>
+
+        <% end %>
+    <% else %>
+        <h2>Login to make a post!</h2>
+    <% end %>
+
+    <h3>All posts for <%= @game.name%>:</h3>
+    <div class="posts_section">
+        <% @posts.each do |post| %>
+        <% next unless post.present? %>
+        <div class="user_post">
+            <div class="post_image_section">
+                <%= post.user.profile_image.present? ? image_tag(post.user.profile_image, :class => "post_user_image") : image_tag("/assets/no_image.png", :class => "post_user_image")%>
+            </div>
+            <div class="post_content_section">
+                <p><%= link_to((post.user.nickname.present? ? post.user.nickname : post.user.email), post.user)  %><p>
+                <p><%= post.content %></p>
+                <%= image_tag post.image if post.image.present? %>
+                <p><em>Posted on: <%= post.date_posted.strftime("%A, %Y/%m/%d %l:%M %p") %></em></p>
+                <% if @current_user.present? %>
+                    <%= button_to "Edit", edit_post_path(post), :method => "get", :class => "btn_hover" if post.user.id == @current_user.id %>
+                    <%= button_to "Delete", post, :method => "delete", :data => { :confirm => "Are you sure you want to delete this post?"}, :class => "btn_hover" if post.user.id == @current_user.id %>
+                <% end %>
+            </div>
+        </div>
+        <% end %>
+    </div>
+</div>

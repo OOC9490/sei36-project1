@@ -24,6 +24,11 @@ ul{
     list-style-type: none;
 }
 
+main{
+    box-sizing: border-box;
+    padding-right: 1em;
+}
+
 input[type=submit]{
     margin: 1em 0;
     border-radius: 1em;
@@ -221,6 +226,12 @@ a:hover{
     max-height: 150px;
 }
 
+.user_profile {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 1em;
+}
+
 footer{
     width: 100vw;
     padding-bottom: 1em;
@@ -228,6 +239,43 @@ footer{
     background-color: #000;
     grid-row-start: 2;
     grid-row-end: 3;
+}
+
+.input_comment{
+    border-radius: 1em;
+    display: block;
+    font-size: 1.1em;
+    resize: none;
+}
+
+.posts_section{
+    display: grid;
+    grid-template-rows: auto;
+    grid-row-gap: 1em;
+}
+
+.user_post{
+    display: grid;
+    grid-template-columns: 80px auto;
+    grid-column-gap: 1em;
+}
+
+.post_image_section img{
+    border-radius: 1em;
+    width: 75px;
+    height: 75px;
+    justify-items: center;
+    align-items: center;
+}
+
+.post_content_section{
+    border-radius: 1em;
+    border: 1px solid #fff;
+    padding: 0 1em;
+}
+
+.post_content_section img{
+    max-height: 12em;
 }
 
 .footer_content{
