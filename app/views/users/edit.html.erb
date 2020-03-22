@@ -9,7 +9,7 @@
 <% if @user.profile_image.present? %>
     <%= image_tag @user.profile_image, :alt => "#{@user.nickname}'s profile image", :class => "profile_image" %>
 <% else %>
-    <%= image_tag "/assets/no_profile_image", :alt => "no profile image provided", :class => "profile_image" %>
+    <%= image_tag "/assets/no_image", :alt => "no profile image provided", :class => "profile_image" %>
 <% end %>
 
 <%= form_for @user do |f| %>
