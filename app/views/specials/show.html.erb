@@ -29,7 +29,7 @@
         <%= button_to "Delete #{@special.name}", @special , :method => "delete", :data => { :confirm => "Are you sure?"} , :class => "btn_hover"%>
     <% end %>
 </div>
-
+<div class="div_break"></div>
 <div class="dicussion">
     <% if @current_user.present? %>
         <%= form_for(Post.new, :html => {:multipart => true}) do |f| %>
@@ -48,7 +48,7 @@
     <% else %>
         <h2>Login to make a post!</h2>
     <% end %>
-
+    <div class="div_break"></div>
     <h3>All posts for <%= @special.name%>:</h3>
     <div class="posts_section">
         <% @posts.each do |post| %>
