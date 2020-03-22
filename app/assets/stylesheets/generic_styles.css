@@ -95,7 +95,7 @@ a:hover{
 
 .site_wrapper {
     box-sizing: border-box;
-    background: linear-gradient(to bottom right, #870000, #160b0b , #190A05);
+    background: linear-gradient(to bottom right, #160b0b , #330000, #870000);
 }
 
 .container{
