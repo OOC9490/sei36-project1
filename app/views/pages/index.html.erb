@@ -18,16 +18,28 @@
         <div class="latest_title">Fighter's news:
             <div class="div_break"></div>
         </div>
-        <%= link_to image_tag(@latest_fighter.stock_symbol, :alt => @latest_fighter.name, :class => "homepage_preview"), @latest_fighter %>
+        <% if @latest_fighter.stock_symbol.present? %>
+            <%= link_to image_tag(@latest_fighter.stock_symbol, :alt => @latest_fighter.name, :class => "homepage_preview"), @latest_fighter %>
+        <% else %>
+            <p><%= @latest_fighter.name %> doesn't have a stock image, add one by clicking <%= link_to "here", edit_fighter_path(@latest_fighter) , :class => "link_suggestion" %>!</p>
+            <p><strong>OR</strong></p>
+            <p>Click <%= link_to "here", @latest_fighter, :class => "link_suggestion" %> to view details for <%= @latest_fighter.name %> directly.</p>
+        <% end %>
         <div class="div_break"></div>
-        <p><span class="latest_label"><%= @latest_fighter.name %></span> joins the fray! (click their icon/link above to view his profile)</p>
+        <p><span class="latest_label"><%= @latest_fighter.name %></span> joins the fray!</p>
     </div>
     <div class="latest_container">
         <div class="latest_title">Skill acquired!
         <div class="div_break"></div>
         </div>
-        <%= link_to image_tag(@latest_special.preview, :alt => @latest_special.name, :class => "homepage_preview"), @latest_special %>
+        <% if @latest_special.preview.present? %>
+            <%= link_to image_tag(@latest_special.preview, :alt => @latest_special.name, :class => "homepage_preview"), @latest_special %>
+        <% else %>
+            <p><%= @latest_special.name %> doesn't have a preview image, add one by clicking <%= link_to "here", edit_special_path(@latest_special) , :class => "link_suggestion" %>!</p>
+            <p><strong>OR</strong></p>
+            <p>Click <%= link_to "here", @latest_special, :class => "link_suggestion" %> to view details for <%= @latest_special.name %> directly.</p>
+        <% end %>
         <div class="div_break"></div>
-        <p><span class="latest_label"><%= @latest_special.name %></span> is ready to rock and roll! (click the preview/link above to view the exciting details!)</p>
+        <p><span class="latest_label"><%= @latest_special.name %></span> is ready to rock and roll!</p>
     </div>
 </div>

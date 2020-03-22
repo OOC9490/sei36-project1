@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   before_action :check_for_login, :only => [:edit, :update]
-  before_action :check_for_admin, :only => [:index, :destroy, :reset_password]
+  before_action :check_for_admin, :only => [:index, :destroy]
 
   def index
     @users = User.all

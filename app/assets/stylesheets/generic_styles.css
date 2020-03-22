@@ -111,9 +111,9 @@ a:hover{
     background-color: #fff;
 }
 
-.black{
-    border: 1px solid #000;
-    background-color: #000;
+.link_suggestion {
+    text-decoration: underline;
+    font-style: italic;
 }
 
 .main_nav{

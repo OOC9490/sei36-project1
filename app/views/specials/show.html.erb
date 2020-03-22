@@ -11,8 +11,11 @@
             <li><strong>Attack Type:</strong> <%= @special.attack_type %></li>
             <li><strong>Damage:</strong> <%= @special.damage_dealt %></li>
         </ul>
-
-        <%= image_tag @special.preview, :class => "feature", :alt => @special.name if @special.preview.present? %>
+        <% if @special.preview.present? %>
+            <%= image_tag @special.preview, :class => "feature", :alt => @special.name %>
+        <% else %>
+            <p>Add a preview image for <%= @special.name %>, by clicking "Edit Move" below!</p>
+        <% end %>
     </div>
     <div class="div_break"></div>
     <strong>Article added on:</strong> <%= @special.entry_created.strftime("%A, %Y/%m/%d %l:%M %p %Z") %>

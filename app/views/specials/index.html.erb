@@ -5,10 +5,12 @@
     <% @fighters.each do |fighter| %>
         <h3><%= fighter.name %></h3>
         <div class="inner_container">
-        <% @specials.each do |special| %>
-            <% if special.fighter.present? %>
-                <%= link_to image_tag(special.preview, :class => "special_select"), special if special.preview.present? && special.fighter.id == fighter.id %>
-            <% end %>  
+        <% if fighter.specials.present? %>
+            <% fighter.specials.each do |special| %>
+                <%= link_to image_tag(special.preview, :class => "special_select", :alt => special.name), special %>
+            <% end %>
+        <% else %>
+            <p>There are currently so special moves associated with this fighter. Add and associate one by clicking <%= link_to "here", new_special_path, :class => "link_suggestion" %>.</p>
         <% end %>
         </div>
     <% end %>
