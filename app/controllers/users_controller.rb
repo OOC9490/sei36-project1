@@ -29,8 +29,8 @@ class UsersController < ApplicationController
     user = User.find params[:id]
     user.update user_profile_params
     flash[:notice] = "Your details have been updated!"
-    redirect_to edit_user_path(user.id)
-  end
+    redirect_to user_path(user.id)
+  end 
 
   def show
     @user = User.find params[:id]

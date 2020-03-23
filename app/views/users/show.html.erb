@@ -18,6 +18,10 @@
         </ul>
 
         <%= button_to "Edit my profile", edit_user_path(@user), :method => "get", :class => "btn_hover" %>
+
+        <% if flash[:notice].present? %>
+            <h2><%= flash[:notice] %></h2>
+        <% end %>
     </div>
     <div class="about_posts">
         <div class="post_details">
