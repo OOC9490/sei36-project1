@@ -5,7 +5,9 @@ Rails.application.routes.draw do
   resources :specials
   resources :games
   resources :users
-  resources :posts
+  resources :posts do
+    resources :likes
+  end
 
   get 'session/new'
 

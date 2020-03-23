@@ -19,31 +19,63 @@
 
         <%= button_to "Edit my profile", edit_user_path(@user), :method => "get", :class => "btn_hover" %>
     </div>
-    <div class="post_details">
-        <% if @user.nickname.present? %>
-            <h2><%= @user.nickname %>'s posts </h2>
-        <% else %>
-            <h2>Your posts</h2>
-        <% end %>
-        <% @user.posts.each do |post| %>
-            <div class="post_content_section">
-                <p>Posted in:
-                    <span class="link_suggestion">
-                        <% case post.article_type %>
-                        <% when "fighter" %>
-                            <%= link_to post.fighter.name, post.fighter %>
-                        <% when "special" %>
-                            <%= link_to post.special.name, post.special %>
-                        <% when "game" %>
-                            <%= link_to post.game.name, post.game %>
-                        <% end %> 
-                    </span>
-                </p>
-                <p><%= post.content %></p>
-                <%= image_tag post.image if post.image.present? %>
-                <p><em>Posted on: <%= post.date_posted.strftime("%A, %Y/%m/%d %l:%M %p") %></em></p>
-            </div>
-        <% end %>
+    <div class="about_posts">
+        <div class="post_details">
+            <% if @user.nickname.present? %>
+                <h2><%= @user.nickname %>'s posts </h2>
+            <% else %>
+                <h2>Your posts:</h2>
+            <% end %>
+            <% @user.posts.each do |post| %>
+                <div class="post_content_section">
+                    <p>Posted in:
+                        <span class="link_suggestion">
+                            <% case post.article_type %>
+                            <% when "fighter" %>
+                                <%= link_to post.fighter.name, post.fighter %>
+                            <% when "special" %>
+                                <%= link_to post.special.name, post.special %>
+                            <% when "game" %>
+                                <%= link_to post.game.name, post.game %>
+                            <% end %> 
+                        </span>
+                    </p>
+                    <p><%= post.content %></p>
+                    <%= image_tag post.image if post.image.present? %>
+                    <p><em>Posted on: <%= post.date_posted.strftime("%A, %Y/%m/%d %l:%M %p") %></em></p>
+                </div>
+            <% end %>
+        </div>
+        <div class="post_details">
+            <% if @user.nickname.present? %>
+                <h2><%= @user.nickname %>'s liked posts </h2>
+            <% else %>
+                <h2>Your liked posts:</h2>
+            <% end %>
+            <% if @user.likes.present? %>
+                <% @user.likes.each do |like| %>
+                    <div class="post_content_section">
+                        <p>Posted in:
+                            <span class="link_suggestion">
+                                <% case like.post.article_type %>
+                                <% when "fighter" %>
+                                    <%= link_to like.post.fighter.name, like.post.fighter %>
+                                <% when "special" %>
+                                    <%= link_to like.post.special.name, like.post.special %>
+                                <% when "game" %>
+                                    <%= link_to like.post.game.name, like.post.game %>
+                                <% end %> 
+                            </span>
+                        </p>
+                        <p><%= like.post.content %></p>
+                        <%= image_tag like.post.image if like.post.image.present? %>
+                        <p><em>Posted on: <%= like.post.date_posted.strftime("%A, %Y/%m/%d %l:%M %p") %></em></p>
+                    </div>
+                <% end %>
+            <% else %>
+                <em>You have no liked posts!</em>
+            <% end %>
+        </div>
     </div>
 </div>
 
