@@ -232,6 +232,10 @@ a:hover{
     grid-column-gap: 1em;
 }
 
+.post_details div{
+    margin-bottom: 1em;
+}
+
 footer{
     width: 100vw;
     padding-bottom: 1em;

@@ -26,11 +26,11 @@
     <div class="about_posts">
         <div class="post_details">
             <% if @user.nickname.present? %>
-                <h2><%= @user.nickname %>'s posts </h2>
+                <h2><%= @user.nickname %>'s posts:</h2>
             <% else %>
                 <h2>Your posts:</h2>
             <% end %>
-            <% @user.posts.each do |post| %>
+            <% @user.posts.sort.each do |post| %>
                 <div class="post_content_section">
                     <p>Posted in:
                         <span class="link_suggestion">
@@ -52,12 +52,12 @@
         </div>
         <div class="post_details">
             <% if @user.nickname.present? %>
-                <h2><%= @user.nickname %>'s liked posts </h2>
+                <h2><%= @user.nickname %>'s liked posts:</h2>
             <% else %>
                 <h2>Your liked posts:</h2>
             <% end %>
             <% if @user.likes.present? %>
-                <% @user.likes.each do |like| %>
+                <% @user.likes.sort.each do |like| %>
                     <div class="post_content_section">
                         <p>Posted in:
                             <span class="link_suggestion">
@@ -73,7 +73,7 @@
                         </p>
                         <p><%= like.post.content %></p>
                         <%= image_tag like.post.image if like.post.image.present? %>
-                        <p><em>Posted on: <%= like.post.date_posted.strftime("%A, %Y/%m/%d %l:%M %p") %></em></p>
+                        <p><em>Liked on: <%= like.liked_on.strftime("%A, %Y/%m/%d %l:%M %p") if like.liked_on.present? %></em></p>
                     </div>
                 <% end %>
             <% else %>

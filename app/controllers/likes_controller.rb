@@ -3,7 +3,9 @@ class LikesController < ApplicationController
     before_action :find_like, only: [:destroy]
 
     def create
-        @post.likes.create(user_id: @current_user.id)
+        like = @post.likes.create(user_id: @current_user.id)
+        like.liked_on = Time.now
+        like.save
         redirect_choice @post, @post.article_type
     end
 
