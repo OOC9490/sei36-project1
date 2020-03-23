@@ -11,6 +11,7 @@ class FightersController < ApplicationController
 
   def create
     fighter = Fighter.create fighter_params
+    binding.pry
     fighter.entry_created = Time.zone.now
     fighter.save
     redirect_to fighter
@@ -39,6 +40,6 @@ class FightersController < ApplicationController
 
   private
   def fighter_params
-    params.require(:fighter).permit :name, :stock_symbol, :availability, :image, :final_smash, :franchise, :game_ids, :entry_created
+    params.require(:fighter).permit(:name, :stock_symbol, :availability, :image, :final_smash, :franchise, :entry_created, game_ids:[])
   end
 end

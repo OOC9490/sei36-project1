@@ -11,8 +11,8 @@
     <%= f.url_field :image, :placeholder => "Provide a link to your image..."  %>
     <%= f.label :final_smash %>
     <%= f.url_field :final_smash, :placeholder => "Provide a link to your image..."  %>
-    <%= f.label :game_id %>
-    <%= f.select :game_ids, Game.pluck(:name, :id), :include_blank => true %>
-
+    <%= f.label "Included in the Following Games:" %><br><br>
+    <%= f.collection_check_boxes :game_ids, Game.all, :id, :name %>
+    <br>
     <%= f.submit %>
 <% end %>
