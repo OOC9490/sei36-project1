@@ -19,8 +19,12 @@
             <li><strong>Availability: </strong><%= @fighter.availability %></li>
             <li>
                 <strong>Games:</strong><br>
-                <% @fighter.games.each do |game| %>
-                    <%= link_to image_tag(game.image, :class => "profile_thumb"), game if game.image.present? %>
+                <% if @fighter.games.present? %>
+                    <% @fighter.games.each do |game| %>
+                        <%= link_to image_tag(game.image, :class => "profile_thumb"), game if game.image.present? %>
+                    <% end %>
+                <% else %>
+                    <p>Give <%= @fighter.name %> a home to belong to by clicking "Edit Fighter" below</p>
                 <% end %>
             </li>
             <li><strong>Special Moves:</strong><br>
