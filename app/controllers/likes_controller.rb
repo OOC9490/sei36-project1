@@ -31,6 +31,5 @@ class LikesController < ApplicationController
             redirect_to post_object.game
         when "special"
             redirect_to post_object.special
-        end
     end
 end

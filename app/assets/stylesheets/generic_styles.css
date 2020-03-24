@@ -311,6 +311,10 @@ svg{
     margin-right: 1em;
 }
 
+.social_media a{
+    text-decoration: none;
+}
+
 .twitter{
     fill: #1da1f2;
 }
