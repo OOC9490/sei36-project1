@@ -39823,3 +39823,361 @@ Processing by UsersController#show as HTML
 Completed 200 OK in 147ms (Views: 127.6ms | ActiveRecord: 5.4ms)
 
 
+Started GET "/users/77" for ::1 at 2020-03-24 11:37:06 +1100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"77"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 77], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 77], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:36
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (2.4ms)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 1.6ms)
+
+
+  
+SyntaxError (/Users/mojave-vm/sei36/projects/project-1/app/views/users/show.html.erb:20: syntax error, unexpected ')', expecting `then' or ';' or '\n'
+...d=( if @current_user.present? );@output_buffer.safe_append='
+...                              ^
+/Users/mojave-vm/sei36/projects/project-1/app/views/users/show.html.erb:22: syntax error, unexpected `end', expecting ')'
+'.freeze;         end 
+                  ^~~
+/Users/mojave-vm/sei36/projects/project-1/app/views/users/show.html.erb:93: syntax error, unexpected `ensure', expecting ')'
+          ensure
+          ^~~~~~
+/Users/mojave-vm/sei36/projects/project-1/app/views/users/show.html.erb:95: syntax error, unexpected `end', expecting ')'
+          end
+          ^~~
+):
+  
+app/views/users/show.html.erb:20: syntax error, unexpected ')', expecting `then' or ';' or '\n'
+app/views/users/show.html.erb:22: syntax error, unexpected `end', expecting ')'
+app/views/users/show.html.erb:93: syntax error, unexpected `ensure', expecting ')'
+app/views/users/show.html.erb:95: syntax error, unexpected `end', expecting ')'
+Started GET "/users/77" for ::1 at 2020-03-24 11:37:33 +1100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"77"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 77], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 77], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:36
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mPost Load (1.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."user_id" = $1[0m  [["user_id", 77]]
+  ↳ app/views/users/show.html.erb:35
+  [1m[36mLike Load (0.5ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."user_id" = $1[0m  [["user_id", 77]]
+  ↳ app/views/users/show.html.erb:62
+  Rendered users/show.html.erb within layouts/application (13.1ms)
+Completed 200 OK in 47ms (Views: 37.0ms | ActiveRecord: 3.1ms)
+
+
+Started DELETE "/login" for ::1 at 2020-03-24 11:37:38 +1100
+Processing by SessionController#destroy as HTML
+  Parameters: {"authenticity_token"=>"EYP59bmgsqZgDBnMT7SUfaMKkgpaH9TDUXpjXe8MSu3H9Oon0NjU6hgqIcReDxpAW6KSAXR1qVLUZV81L192aw=="}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 77], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+Redirected to http://localhost:3000/login
+Completed 302 Found in 4ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/login" for ::1 at 2020-03-24 11:37:38 +1100
+Processing by SessionController#new as HTML
+  Rendering session/new.html.erb within layouts/application
+  Rendered session/new.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 25ms (Views: 22.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for ::1 at 2020-03-24 11:42:10 +1100
+Processing by SessionController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yPIuRJFI8LEwZqBXVx+39bxlbXqns2Urwp0Ar4v4OIYehT2W+DCW/UhAmF9GpDnIRM1tcYnZGLpHgjzHS6sEAA==", "email"=>"test_user@ga.co", "password"=>"[FILTERED]", "commit"=>"Log in"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "test_user@ga.co"], ["LIMIT", 1]]
+  ↳ app/controllers/session_controller.rb:6
+Redirected to http://localhost:3000/
+Completed 302 Found in 293ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/" for ::1 at 2020-03-24 11:42:10 +1100
+Processing by PagesController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 77], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+  [1m[36mFighter Load (1.6ms)[0m  [1m[34mSELECT  "fighters".* FROM "fighters" ORDER BY entry_created DESC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:3
+  [1m[36mSpecial Load (1.0ms)[0m  [1m[34mSELECT  "specials".* FROM "specials" ORDER BY entry_created DESC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:4
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 37ms (Views: 27.6ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/fighters" for ::1 at 2020-03-24 11:42:14 +1100
+Processing by FightersController#index as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 77], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+  Rendering fighters/index.html.erb within layouts/application
+  [1m[36mFighter Load (3.1ms)[0m  [1m[34mSELECT "fighters".* FROM "fighters"[0m
+  ↳ app/views/fighters/index.html.erb:4
+  Rendered fighters/index.html.erb within layouts/application (15.1ms)
+Completed 200 OK in 206ms (Views: 195.5ms | ActiveRecord: 4.5ms)
+
+
+Started GET "/games" for ::1 at 2020-03-24 11:43:23 +1100
+Processing by GamesController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 77], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+  Rendering games/index.html.erb within layouts/application
+  [1m[36mGame Load (1.0ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  ↳ app/views/games/index.html.erb:4
+  Rendered games/index.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 43ms (Views: 35.6ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/games/113" for ::1 at 2020-03-24 11:43:32 +1100
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"113"}
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 77], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+  [1m[36mGame Load (2.5ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = $1 LIMIT $2[0m  [["id", 113], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:7
+  [1m[36mPost Load (1.9ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."game_id" = $1[0m  [["game_id", 113]]
+  ↳ app/controllers/games_controller.rb:8
+  Rendering games/show.html.erb within layouts/application
+  [1m[36mFighter Load (5.4ms)[0m  [1m[34mSELECT "fighters".* FROM "fighters" INNER JOIN "fighters_games" ON "fighters"."id" = "fighters_games"."fighter_id" WHERE "fighters_games"."game_id" = $1[0m  [["game_id", 113]]
+  ↳ app/views/games/show.html.erb:8
+  Rendered games/show.html.erb within layouts/application (60.0ms)
+Completed 200 OK in 125ms (Views: 84.3ms | ActiveRecord: 17.0ms)
+
+
+Started POST "/posts" for ::1 at 2020-03-24 11:43:44 +1100
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"qXUrCrj2GhKd6tZaIdz1DSEvSyYsNAXc7mOWNdeyZ+N/AjjY0Y58XuXM7lIwZ3sw2YdLLQJeeE1rfKpdF+FbZQ==", "post"=>{"game_id"=>"113", "user_id"=>"77", "article_type"=>"game", "content"=>"I hate the random tripping in this game", "image"=>""}, "commit"=>"Submit post!"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 77], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+  [1m[35m (2.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/posts_controller.rb:9
+  [1m[36mPost Create (7.5ms)[0m  [1m[32mINSERT INTO "posts" ("user_id", "game_id", "content", "created_at", "updated_at", "image", "article_type") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["user_id", 77], ["game_id", 113], ["content", "I hate the random tripping in this game"], ["created_at", "2020-03-24 11:43:44.296150"], ["updated_at", "2020-03-24 11:43:44.296150"], ["image", ""], ["article_type", "game"]]
+  ↳ app/controllers/posts_controller.rb:9
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/posts_controller.rb:9
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/posts_controller.rb:11
+  [1m[36mPost Update (1.2ms)[0m  [1m[33mUPDATE "posts" SET "date_posted" = $1, "updated_at" = $2 WHERE "posts"."id" = $3[0m  [["date_posted", "2020-03-24 11:43:44.308728"], ["updated_at", "2020-03-24 11:43:44.309639"], ["id", 59]]
+  ↳ app/controllers/posts_controller.rb:11
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/posts_controller.rb:11
+  [1m[36mGame Load (0.5ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = $1 LIMIT $2[0m  [["id", 113], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:49
+Redirected to http://localhost:3000/games/113
+Completed 302 Found in 29ms (ActiveRecord: 15.2ms)
+
+
+Started GET "/games/113" for ::1 at 2020-03-24 11:43:44 +1100
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"113"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 77], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+  [1m[36mGame Load (0.3ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = $1 LIMIT $2[0m  [["id", 113], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:7
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."game_id" = $1[0m  [["game_id", 113]]
+  ↳ app/controllers/games_controller.rb:8
+  Rendering games/show.html.erb within layouts/application
+  [1m[36mFighter Load (0.9ms)[0m  [1m[34mSELECT "fighters".* FROM "fighters" INNER JOIN "fighters_games" ON "fighters"."id" = "fighters_games"."fighter_id" WHERE "fighters_games"."game_id" = $1[0m  [["game_id", 113]]
+  ↳ app/views/games/show.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 77], ["LIMIT", 1]]
+  ↳ app/views/games/show.html.erb:40
+  [1m[35m (5.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."post_id" = $1[0m  [["post_id", 59]]
+  ↳ app/views/games/show.html.erb:47
+  [1m[36mLike Load (0.6ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."user_id" = $1[0m  [["user_id", 77]]
+  ↳ app/views/games/show.html.erb:50
+  Rendered games/show.html.erb within layouts/application (31.5ms)
+Completed 200 OK in 62ms (Views: 49.6ms | ActiveRecord: 8.4ms)
+
+
+Started DELETE "/login" for ::1 at 2020-03-24 11:44:03 +1100
+Processing by SessionController#destroy as HTML
+  Parameters: {"authenticity_token"=>"Zozfhjj9PSDhlsu+pBn+uYBhWsxwXcZPPsrcxUhjvk2w+8xUUYVbbJmw87a1onCEeMlax143u9671eCtiDCCyw=="}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 77], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+Redirected to http://localhost:3000/login
+Completed 302 Found in 2ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/login" for ::1 at 2020-03-24 11:44:03 +1100
+Processing by SessionController#new as HTML
+  Rendering session/new.html.erb within layouts/application
+  Rendered session/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 25ms (Views: 23.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for ::1 at 2020-03-24 11:44:11 +1100
+Processing by SessionController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"p/PBEK1wn7zuXGK2mq4RLp8OQG5qTrqc0ZSKhHZDxfZxhNLCxAj58JZ6Wr6LFZ8TZ6ZAZUQkxw1Ui7bsthD5cA==", "email"=>"lcarreon@ga.co", "password"=>"[FILTERED]", "commit"=>"Log in"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "lcarreon@ga.co"], ["LIMIT", 1]]
+  ↳ app/controllers/session_controller.rb:6
+Redirected to http://localhost:3000/
+Completed 302 Found in 264ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2020-03-24 11:44:12 +1100
+Processing by PagesController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 74], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+  [1m[36mFighter Load (1.1ms)[0m  [1m[34mSELECT  "fighters".* FROM "fighters" ORDER BY entry_created DESC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:3
+  [1m[36mSpecial Load (0.9ms)[0m  [1m[34mSELECT  "specials".* FROM "specials" ORDER BY entry_created DESC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:4
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 29ms (Views: 22.1ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/games" for ::1 at 2020-03-24 11:44:17 +1100
+Processing by GamesController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 74], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+  Rendering games/index.html.erb within layouts/application
+  [1m[36mGame Load (0.5ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  ↳ app/views/games/index.html.erb:4
+  Rendered games/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 52ms (Views: 48.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/games/113" for ::1 at 2020-03-24 11:44:19 +1100
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"113"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 74], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+  [1m[36mGame Load (0.8ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = $1 LIMIT $2[0m  [["id", 113], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:7
+  [1m[36mPost Load (0.8ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."game_id" = $1[0m  [["game_id", 113]]
+  ↳ app/controllers/games_controller.rb:8
+  Rendering games/show.html.erb within layouts/application
+  [1m[36mFighter Load (2.0ms)[0m  [1m[34mSELECT "fighters".* FROM "fighters" INNER JOIN "fighters_games" ON "fighters"."id" = "fighters_games"."fighter_id" WHERE "fighters_games"."game_id" = $1[0m  [["game_id", 113]]
+  ↳ app/views/games/show.html.erb:8
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 77], ["LIMIT", 1]]
+  ↳ app/views/games/show.html.erb:40
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."post_id" = $1[0m  [["post_id", 59]]
+  ↳ app/views/games/show.html.erb:47
+  [1m[36mLike Load (0.7ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."user_id" = $1[0m  [["user_id", 74]]
+  ↳ app/views/games/show.html.erb:50
+  [1m[36mPost Load (1.8ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 57], ["LIMIT", 1]]
+  ↳ app/views/games/show.html.erb:50
+  [1m[36mPost Load (0.8ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 58], ["LIMIT", 1]]
+  ↳ app/views/games/show.html.erb:50
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 54], ["LIMIT", 1]]
+  ↳ app/views/games/show.html.erb:50
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 55], ["LIMIT", 1]]
+  ↳ app/views/games/show.html.erb:50
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 52], ["LIMIT", 1]]
+  ↳ app/views/games/show.html.erb:50
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 56], ["LIMIT", 1]]
+  ↳ app/views/games/show.html.erb:50
+  Rendered games/show.html.erb within layouts/application (34.0ms)
+Completed 200 OK in 71ms (Views: 52.0ms | ActiveRecord: 10.9ms)
+
+
+Started GET "/users/77" for ::1 at 2020-03-24 11:44:22 +1100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"77"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 74], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 77], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:36
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."user_id" = $1[0m  [["user_id", 77]]
+  ↳ app/views/users/show.html.erb:35
+  [1m[36mGame Load (0.6ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = $1 LIMIT $2[0m  [["id", 113], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:46
+  [1m[36mLike Load (0.5ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."user_id" = $1[0m  [["user_id", 77]]
+  ↳ app/views/users/show.html.erb:62
+  Rendered users/show.html.erb within layouts/application (8.4ms)
+Completed 200 OK in 43ms (Views: 33.4ms | ActiveRecord: 2.6ms)
+
+
+Started DELETE "/login" for ::1 at 2020-03-24 11:44:27 +1100
+Processing by SessionController#destroy as HTML
+  Parameters: {"authenticity_token"=>"v8Kny0QnIfIMrCA5yTtSx/EVtughGrEIaYCc8Oa5fdpptbQZLV9HvnSKGDHYgNz6Cb224w9wzJnsn6CYJupBXA=="}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 74], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+Redirected to http://localhost:3000/login
+Completed 302 Found in 3ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/login" for ::1 at 2020-03-24 11:44:27 +1100
+Processing by SessionController#new as HTML
+  Rendering session/new.html.erb within layouts/application
+  Rendered session/new.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 23ms (Views: 21.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/fighters" for ::1 at 2020-03-24 11:44:28 +1100
+Processing by FightersController#index as HTML
+  Rendering fighters/index.html.erb within layouts/application
+  [1m[36mFighter Load (0.7ms)[0m  [1m[34mSELECT "fighters".* FROM "fighters"[0m
+  ↳ app/views/fighters/index.html.erb:4
+  Rendered fighters/index.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 48ms (Views: 45.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/fighters/120" for ::1 at 2020-03-24 11:44:30 +1100
+Processing by FightersController#show as HTML
+  Parameters: {"id"=>"120"}
+  [1m[36mFighter Load (0.6ms)[0m  [1m[34mSELECT  "fighters".* FROM "fighters" WHERE "fighters"."id" = $1 LIMIT $2[0m  [["id", 120], ["LIMIT", 1]]
+  ↳ app/controllers/fighters_controller.rb:30
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."fighter_id" = $1[0m  [["fighter_id", 120]]
+  ↳ app/controllers/fighters_controller.rb:31
+  Rendering fighters/show.html.erb within layouts/application
+  [1m[36mGame Load (6.5ms)[0m  [1m[34mSELECT "games".* FROM "games" INNER JOIN "fighters_games" ON "games"."id" = "fighters_games"."game_id" WHERE "fighters_games"."fighter_id" = $1[0m  [["fighter_id", 120]]
+  ↳ app/views/fighters/show.html.erb:22
+  [1m[36mSpecial Exists (1.0ms)[0m  [1m[34mSELECT  1 AS one FROM "specials" WHERE "specials"."fighter_id" = $1 LIMIT $2[0m  [["fighter_id", 120], ["LIMIT", 1]]
+  ↳ app/views/fighters/show.html.erb:31
+  [1m[36mSpecial Load (0.6ms)[0m  [1m[34mSELECT "specials".* FROM "specials" WHERE "specials"."fighter_id" = $1[0m  [["fighter_id", 120]]
+  ↳ app/views/fighters/show.html.erb:33
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 74], ["LIMIT", 1]]
+  ↳ app/views/fighters/show.html.erb:85
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."post_id" = $1[0m  [["post_id", 52]]
+  ↳ app/views/fighters/show.html.erb:92
+  Rendered fighters/show.html.erb within layouts/application (29.9ms)
+Completed 200 OK in 62ms (Views: 42.4ms | ActiveRecord: 10.5ms)
+
+
+Started GET "/games" for ::1 at 2020-03-24 11:44:32 +1100
+Processing by GamesController#index as HTML
+  Rendering games/index.html.erb within layouts/application
+  [1m[36mGame Load (10.3ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  ↳ app/views/games/index.html.erb:4
+  Rendered games/index.html.erb within layouts/application (13.4ms)
+Completed 200 OK in 41ms (Views: 28.7ms | ActiveRecord: 10.3ms)
+
+
+Started GET "/games/113" for ::1 at 2020-03-24 11:44:36 +1100
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"113"}
+  [1m[36mGame Load (4.2ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = $1 LIMIT $2[0m  [["id", 113], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:7
+  [1m[36mPost Load (0.9ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."game_id" = $1[0m  [["game_id", 113]]
+  ↳ app/controllers/games_controller.rb:8
+  Rendering games/show.html.erb within layouts/application
+  [1m[36mFighter Load (1.6ms)[0m  [1m[34mSELECT "fighters".* FROM "fighters" INNER JOIN "fighters_games" ON "fighters"."id" = "fighters_games"."fighter_id" WHERE "fighters_games"."game_id" = $1[0m  [["game_id", 113]]
+  ↳ app/views/games/show.html.erb:8
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 77], ["LIMIT", 1]]
+  ↳ app/views/games/show.html.erb:40
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."post_id" = $1[0m  [["post_id", 59]]
+  ↳ app/views/games/show.html.erb:47
+  Rendered games/show.html.erb within layouts/application (15.5ms)
+Completed 200 OK in 83ms (Views: 68.0ms | ActiveRecord: 8.0ms)
+
+
+Started GET "/users/77" for ::1 at 2020-03-24 11:44:37 +1100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"77"}
+Redirected to http://localhost:3000/login
+Filter chain halted as :check_for_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2020-03-24 11:44:37 +1100
+Processing by SessionController#new as HTML
+  Rendering session/new.html.erb within layouts/application
+  Rendered session/new.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 41ms (Views: 39.5ms | ActiveRecord: 0.0ms)
+
+

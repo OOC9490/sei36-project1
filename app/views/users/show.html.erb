@@ -17,7 +17,9 @@
             <li><strong>Current e-mail:</strong><p><%= @user.email %></p></li>
         </ul>
 
-        <%= button_to "Edit my profile", edit_user_path(@user), :method => "get", :class => "btn_hover" %>
+        <% if @current_user.present? %>
+            <%= button_to "Edit my profile", edit_user_path(@user), :method => "get", :class => "btn_hover" if @user.id == @current_user.id %>
+        <% end %>
 
         <% if flash[:notice].present? %>
             <h2><%= flash[:notice] %></h2>
