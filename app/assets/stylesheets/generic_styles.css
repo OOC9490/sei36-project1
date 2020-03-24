@@ -232,6 +232,11 @@ a:hover{
     grid-column-gap: 1em;
 }
 
+.about_posts {
+    display: grid;
+    grid-template-rows: auto;
+}
+
 .post_details div{
     margin-bottom: 1em;
 }

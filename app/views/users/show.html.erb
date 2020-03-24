@@ -30,6 +30,7 @@
             <% else %>
                 <h2>Your posts:</h2>
             <% end %>
+            <em><%= "You have no posts!" unless @user.posts.present? %></em>
             <% @user.posts.sort.each do |post| %>
                 <div class="post_content_section">
                     <p>Posted in:
